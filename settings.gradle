@@ -1,1 +1,1 @@
-include ':app', ':xstutil'
+include ':app', ':mylibrary'

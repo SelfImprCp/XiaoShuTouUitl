@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cp.mylibrary.custom.TitleBarView
+        android:id="@+id/create_two_codes_test_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        </com.cp.mylibrary.custom.TitleBarView>
+
+
+     <Button
+         android:id="@+id/create_two_codes_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+          android:text="生成二维码"
+         />
+
+     <ImageView
+
+          android:id="@+id/create_two_codes_img"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+
+         />
+
+
+    <com.cp.mylibrary.custom.CircleImageView
+
+        android:id="@+id/circle_imageview"
+        android:layout_width="80px"
+        android:layout_height="80px"
+
+
+        />
+
+     <com.cp.mylibrary.custom.TimerTextView
+         android:id="@+id/timer_text_view"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+          ></com.cp.mylibrary.custom.TimerTextView>
+
+
+
+    <Button
+        android:id="@+id/select_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择头像"
+        />
+
+    <ImageView
+
+        android:id="@+id/select_photo_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+
+
+
+
+    <View
+        android:id="@+id/myview_user"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#AF000000"
+        android:visibility="gone" />
+    <!-- #AF000000 70%透明灰 -->
+
+
+</LinearLayout>

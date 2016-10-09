@@ -3,7 +3,7 @@ package com.cp.xiaoshutouutil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.cp.xst.mylibrary.MTestUitl;
+import cn.myasapp.main.R;
 
 
 public class MainActivity extends AppCompatActivity {

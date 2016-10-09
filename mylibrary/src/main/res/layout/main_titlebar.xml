@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white_cp_util">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/titlebar_text_title_two_1"
+            style="@style/titlebar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题标题标题标题标题标题"
+            android:textColor="#242424"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/titlebar_text_title_two_2"
+            style="@style/titlebar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="123456"
+            android:textColor="#646464"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/titlebar_text_title"
+        style="@style/titlebar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#646464"
+
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/titlebar_img_back"
+        style="@style/titlebar_img"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+
+        android:src="@drawable/return_back_black" />
+
+    <ImageView
+        android:id="@+id/titlebar_img_menu_col"
+        style="@style/titlebar_img"
+
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/titlebar_img_menu"
+        android:clickable="true"
+
+        android:src="@drawable/flash_default"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/titlebar_tv_menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/titlebar_img_menu"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:clickable="true"
+        android:text="完成"
+        android:textColor="#269edc"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/titlebar_img_menu"
+        style="@style/titlebar_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:src="@drawable/flash_default"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/titlebar_tv_menu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:text="清空"
+
+        android:textColor="#646464"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_alignParentBottom="true"
+        android:background="#e1e1e1"></View>
+
+
+</RelativeLayout>

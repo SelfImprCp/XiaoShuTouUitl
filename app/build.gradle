@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.cp.xiaoshutouutil"
+        applicationId "cn.myasapp.main"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -19,9 +20,11 @@ android {
     }
 }
 
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile project(':xstutil')
+
+    compile project(':mylibrary')
+
 }

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.cp.mylibrary.custom.CPScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/test_app_utils"
+                style="@style/test_textview_style"
+
+                android:text="测试版本更新" />
+
+
+            <TextView
+                android:id="@+id/test_date_time_util"
+
+                style="@style/test_textview_style"
+                android:text="测DateTimeUtil" />
+
+
+            <TextView
+                android:id="@+id/file_test"
+
+                style="@style/test_textview_style"
+                android:text="测文件 " />
+
+
+            <TextView
+                android:id="@+id/key_board_test"
+
+                style="@style/test_textview_style"
+                android:text="  测软键盘 " />
+
+
+            <TextView
+                android:id="@+id/net_work_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试 NetWorkUtil   " />
+
+            <TextView
+                android:id="@+id/object_utils_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试  Object Utils    " />
+
+
+            <TextView
+                android:id="@+id/random_utils_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试  RandomUtils    " />
+
+
+            <TextView
+                android:id="@+id/screen_utils_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试  ScreentUtil    " />
+
+
+            <TextView
+                android:id="@+id/cache_utils_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试  异常保存    " />
+
+            <TextView
+                android:id="@+id/two_codes_test"
+
+                style="@style/test_textview_style"
+                android:text="   二维码扫描    " />
+
+            <TextView
+                android:id="@+id/create_two_codes_test"
+
+                style="@style/test_textview_style"
+                android:text="   生成带logo的二维码    " />
+
+
+            <TextView
+                android:id="@+id/image_load_test"
+
+                style="@style/test_textview_style"
+                android:text="    测ImageLoad    " />
+
+            <TextView
+                android:id="@+id/banner_test"
+
+                style="@style/test_textview_style"
+                android:text="    测Banner   " />
+
+
+            <TextView
+                android:id="@+id/webview_test"
+
+                style="@style/test_textview_style"
+                android:text="    测WebView   " />
+
+
+            <TextView
+                android:id="@+id/viewpage_test"
+
+                style="@style/test_textview_style"
+                android:text="    测viewpage fragment   " />
+
+            <TextView
+                android:id="@+id/pullto_test"
+
+                style="@style/test_textview_style"
+                android:text="    pullto_test     " />
+
+
+            <TextView
+                android:id="@+id/dialog_test"
+
+                style="@style/test_textview_style"
+                android:text="   测试对话框    " />
+
+            <TextView
+                android:id="@+id/url_test"
+
+                style="@style/test_textview_style"
+                android:text="   url 试    " />
+            <TextView
+                android:id="@+id/pickview_test"
+
+                style="@style/test_textview_style"
+                android:text="  pickerView 测试     " />
+
+
+            <TextView
+                android:id="@+id/xrefreshview_scrollview_test"
+
+                style="@style/test_textview_style"
+                android:text=" xrefreshview_scrollview_test       " />
+
+            <TextView
+                android:id="@+id/xrefreshview_receylie_test"
+
+                style="@style/test_textview_style"
+                android:text=" xrefreshview_receylie_test       " />
+
+
+
+        </LinearLayout>
+    </com.cp.mylibrary.custom.CPScrollView>
+
+</LinearLayout>

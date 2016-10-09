@@ -1,0 +1,29 @@
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+     <com.cp.mylibrary.custom.TitleBarView
+         android:id="@+id/recycler_refresh_title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"></com.cp.mylibrary.custom.TitleBarView>
+
+
+
+    <com.cp.mylibrary.pullto.XRefreshView
+        android:id="@+id/recycler_xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_xrefreshview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#bbccaa"
+            android:scrollbars="vertical" />
+    </com.cp.mylibrary.pullto.XRefreshView>
+
+</com.zhy.autolayout.AutoLinearLayout>

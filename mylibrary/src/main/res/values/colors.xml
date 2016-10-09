@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_text_color">#000000</color>
+
+    <color name="white_cp_util">#FFFFFFFF</color>
+
+    <color name="green_cp_util">#00FF00</color>
+
+    <color name="red_cp_util">#FF0000</color>
+
+    <color name="blue_util">#0000FF</color>
+
+    <color name="gray_cp_util">#9A9A9A</color>
+
+    <color name="black_color_30">#000000</color>
+    <color name="text_light">#3f000000</color>
+
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <color name="light_gray">#1a000000</color>
+    <color name="lightest_gray">#0a000000</color>
+
+    <color name="ailibuli_base_color">#2a70ed</color>
+    <color name="ailibuli_orange_color">#FE5F12</color>
+    <color name="ailibuli_hong_color">#FF5E5B</color>
+    <color name="main_gray">#9A9A9A</color>
+
+    <color name="ui_dialog_divider">@color/list_divider_color</color>
+    <color name="ui_dialog_list_text">#5E5E5E</color>
+
+    <color name="list_divider_color">#DADADA</color>
+
+    <color name="text_dark">#af000000</color>
+
+    <color name="bg_touch">@color/lightest_gray</color>
+
+</resources>
