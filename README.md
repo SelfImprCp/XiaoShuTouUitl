@@ -10,7 +10,8 @@ allprojects {
     }
 }
 
-   compile 'com.github.SelfImprCp:MyUtil:v1.0.4'
+
+    compile 'com.github.SelfImprCp:XiaoShuTouUitl:v1.0.2'
 
 2.注意事项：
  因为包中已经添加：  权限

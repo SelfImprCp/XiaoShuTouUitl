@@ -17,6 +17,6 @@ public class Config {
      public final static String DEFAULT_SAVE_FILE_PATH = Environment
              .getExternalStorageDirectory()
              + File.separator
-             + "MyCp"
+             + "xiaoshutou"
              + File.separator + "download" + File.separator;
 }

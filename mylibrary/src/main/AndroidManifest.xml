@@ -69,11 +69,11 @@
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="5788ac0a67e58e41ce00114b" >
+            android:value="57fb4866e0f55a1b58001414" >
         </meta-data>
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="0428a17a6c02bdf6ac205944210c7a67" >
+            android:value="543412c83c05e80fab127069e38191d1" >
         </meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
