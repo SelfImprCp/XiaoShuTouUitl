@@ -60,8 +60,10 @@
     <string name="xrefreshview_refresh_days_ago">%1s天之前刷新</string>
 
 
-
-
+    <string name="please_password">请输入密码</string>
+    <string name="verification_code">请输入验证码</string>
+    <string name="please_name">请输入手机号码</string>
+    <string name="please_correct_phone">请输入正确手机号码</string>
 
     <string name="down_state">正在下载：%s</string>
 
