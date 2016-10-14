@@ -46,6 +46,40 @@ public class KeyBoardUtils {
 
         imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
     }
+
+
+    /**
+     * 关闭软键盘
+     *
+     * @param mEditText
+     *            输入框
+     * @param mContext
+     *            上下文
+     */
+    public static void closeKeybord2(EditText mEditText, Context mContext)
+    {
+
+        KeyBoardUtils.showSoftKeyboard(mEditText, mContext);
+
+
+        InputMethodManager imm = (InputMethodManager)mContext.
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     ////////////////////////////软件盘//////////////////////////////////////
     /**
      *

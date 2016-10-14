@@ -15,7 +15,7 @@ import com.cp.mylibrary.R;
 public class LoginUitl {
 
 
-    public static  boolean showOrHidePassWord(boolean passWordIsShow, EditText register_input_password) {
+    public static boolean showOrHidePassWord(boolean passWordIsShow, EditText register_input_password) {
 
 
         if (passWordIsShow) {
@@ -67,13 +67,14 @@ public class LoginUitl {
 
 
     /**
+     *
      * 传入EditTExt 不能为null
      * 如果合法,返回true
      * 如果不合法,会有提示,并获取焦点
      * 验证手机号
-     *
      * @param mEtName
      * @return
+     *
      */
 
 
