@@ -15,7 +15,7 @@ import com.cp.mylibrary.R;
 public class LoginUitl {
 
 
-    private boolean showOrHidePassWord(boolean passWordIsShow, EditText register_input_password) {
+    public static  boolean showOrHidePassWord(boolean passWordIsShow, EditText register_input_password) {
 
 
         if (passWordIsShow) {
