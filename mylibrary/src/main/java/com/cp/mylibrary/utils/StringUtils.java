@@ -189,6 +189,25 @@ public class StringUtils {
         return 0;
     }
 
+
+
+    /**
+     * pass
+     * 字符 float
+     *
+     * @param b
+     * @return
+     */
+    public static float toFloat(String b) {
+        try {
+
+            return Float.parseFloat(b);
+        } catch (Exception e) {
+        }
+        return 0;
+    }
+
+
     /**
      * pass
      * 字符串转布尔值
@@ -198,6 +217,7 @@ public class StringUtils {
      */
     public static boolean toBool(String b) {
         try {
+
             return Boolean.parseBoolean(b);
         } catch (Exception e) {
         }
