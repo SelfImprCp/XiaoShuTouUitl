@@ -249,6 +249,10 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
         @Override
         public void dataFailuer(int errorNo, String strMsg) {
 
+            LogCp.i(LogCp.CP, XRefreshListViewFragment.class + "请求列表数据 的时候，出异常了 ,代码：" + errorNo + "， 描述："  + strMsg);
+
+
+
         }
     };
 
