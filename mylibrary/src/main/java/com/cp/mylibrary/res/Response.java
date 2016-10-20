@@ -17,7 +17,7 @@ public class Response implements Serializable {
 	/**
 	 * 0，成功；非0，失败
 	 */
-	private int resultCode = 0;
+	private String resultCode ="";
 
 	/**
 	 * 错误描述
@@ -25,11 +25,11 @@ public class Response implements Serializable {
 	private String resultMessage = "";
 
 
-	public int getResultCode() {
+	public String getResultCode() {
 		return resultCode;
 	}
 
-	public void setResultCode(int resultCode) {
+	public void setResultCode(String resultCode) {
 		this.resultCode = resultCode;
 	}
 
