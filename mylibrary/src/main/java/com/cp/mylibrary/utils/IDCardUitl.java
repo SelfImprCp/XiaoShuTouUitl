@@ -223,7 +223,9 @@ public class IDCardUitl {
      * @throws ParseException
      */
 
-    public static String hideId(String ID) throws ParseException {
+    public static String hideId(String ID)     {
+
+
 
         String regex = "(\\w{6})(\\w+)(\\w{6})";
         return ID.replaceAll(regex, "$1****$3");
