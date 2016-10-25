@@ -12,6 +12,7 @@ import com.cp.mylibrary.app.MyBaseApp;
 
 import com.cp.mylibrary.event.BaseEvent;
 import com.cp.mylibrary.utils.ActivityManagerUtil;
+import com.cp.mylibrary.utils.AppUtils;
 import com.cp.mylibrary.utils.NetWorkUtil;
 import com.cp.mylibrary.utils.ShowToastUtil;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
@@ -61,6 +62,13 @@ public class MyBaseActivity extends KJActivity {
 
 
         EventBus.getDefault().register(this);
+
+
+
+
+
+        AppUtils. getPromission(this);
+
 
 
     }

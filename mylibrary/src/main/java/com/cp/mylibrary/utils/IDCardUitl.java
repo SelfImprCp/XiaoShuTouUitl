@@ -227,7 +227,7 @@ public class IDCardUitl {
 
 
 
-        String regex = "(\\w{6})(\\w+)(\\w{6})";
+        String regex = "(\\w{6})(\\w+)(\\w{4})";
         return ID.replaceAll(regex, "$1****$3");
 
     }

@@ -195,6 +195,7 @@ public class StringUtils {
      * pass
      * 字符 float
      *
+     *
      * @param b
      * @return
      */
