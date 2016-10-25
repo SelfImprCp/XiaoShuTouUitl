@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.cp.mylibrary.R;
 import com.cp.mylibrary.app.MyBaseApp;
 
 import com.cp.mylibrary.event.BaseEvent;
@@ -34,6 +35,17 @@ public class MyBaseActivity extends KJActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //     android:fitsSystemWindows="true"
+        //  android:clipToPadding="false"
+        //透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //透明导航栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
+        tintManager.setStatusBarTintEnabled(true);
+        tintManager.setStatusBarTintResource(R.color.base_color);
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 

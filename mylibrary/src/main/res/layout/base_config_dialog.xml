@@ -63,7 +63,7 @@
         android:layout_marginTop="5dp"
 
         android:text="昵称不得超过10个字"
-        android:textColor="@color/ailibuli_base_color"
+        android:textColor="@color/base_color"
         android:textSize="12sp"
         android:visibility="gone" />
 
