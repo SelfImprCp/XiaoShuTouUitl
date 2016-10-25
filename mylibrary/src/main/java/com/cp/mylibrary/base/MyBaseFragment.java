@@ -1,11 +1,13 @@
 package com.cp.mylibrary.base;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import com.cp.mylibrary.app.MyBaseApp;
 import com.cp.mylibrary.event.BaseEvent;
@@ -28,6 +30,10 @@ public class MyBaseFragment extends SupportFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+
+
+
+
         super.onCreate(savedInstanceState);
         EventBus.getDefault().register(this);
 
@@ -36,6 +42,9 @@ public class MyBaseFragment extends SupportFragment {
 
             ShowToastUtil.showToast(getActivity(), "请检查网络");
         }
+
+
+
 
     }
 

@@ -17,6 +17,15 @@ public class ADInfo {
 	// 是否要分享，1分享，0不分享
 	private String shareAble;
 	private String shareTitle;
+	private String share_url;
+
+	public String getShare_url() {
+		return share_url;
+	}
+
+	public void setShare_url(String share_url) {
+		this.share_url = share_url;
+	}
 
 	public String getImgUrl() {
 		return imgUrl;
