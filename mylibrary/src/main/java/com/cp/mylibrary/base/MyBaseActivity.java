@@ -69,6 +69,8 @@ public class MyBaseActivity extends KJActivity {
         tintManager.setStatusBarTintEnabled(true);
 
 
+        tintManager.setStatusBarTintResource(R.color.base_color);
+
 
 
         EventBus.getDefault().register(this);
