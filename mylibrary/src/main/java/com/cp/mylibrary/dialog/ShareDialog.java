@@ -186,6 +186,18 @@ public class ShareDialog extends CommonDialog implements
     }
 
     private void shareToSinaWeibo() {
+
+
+        UMImage image = new UMImage(mActivity, share_img_url);
+
+        new ShareAction(mActivity).setPlatform(SHARE_MEDIA.SINA)
+                .withText(content)
+                .withTitle(title)
+                .withTargetUrl(link)
+                .withMedia(image)
+                .setCallback(umShareListener)
+                .share();
+
         // 设置新浪微博SSO handler
 //        SinaSsoHandler sinaSsoHandler = new SinaSsoHandler();
 //        sinaSsoHandler.setTargetUrl(this.link);
