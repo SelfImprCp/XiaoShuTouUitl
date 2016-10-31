@@ -148,20 +148,6 @@ public class ShareDialog extends CommonDialog implements
     @SuppressWarnings("deprecation")
     private void shareToWeiChatCircle() {
 
-
-//        UMShareAPI mShareAPI = UMShareAPI.get( this.context);
-//
-//        mShareAPI.doOauthVerify(this.context, SHARE_MEDIA.WEIXIN_CIRCLE, umAuthListener);
-
-
-//        private String title;
-//        private String content;
-//        private String link;
-//        // 分享中显示 的图片
-//        private String share_img_url;
-
-
-
          LogCp.i(LogCp.CP,ShareDialog.class + " 来分享到weChat 朋友圈" + title + content + link  + share_img_url);
 
 
@@ -176,20 +162,6 @@ public class ShareDialog extends CommonDialog implements
                 .share();
 
 
-        // 支持微信朋友圈
-//        UMWXHandler wxCircleHandler = new UMWXHandler(this.context,
-//                Config.WEICHAT_APPID,Config.WEICHAT_SECRET);
-//        wxCircleHandler.setToCircle(true);
-//        wxCircleHandler.addToSocialSDK();
-//        // 设置微信朋友圈分享内容
-//        CircleShareContent circleMedia = new CircleShareContent();
-//        circleMedia.setShareContent(this.content);
-//        // 设置朋友圈title
-//        circleMedia.setTitle(this.title);
-//        circleMedia.setShareImage(getShareImg());
-//        circleMedia.setTargetUrl(this.link);
-//        mController.setShareMedia(circleMedia);
-//        mController.postShare(this.context, SHARE_MEDIA.WEIXIN_CIRCLE, null);
 
 
     }
@@ -197,57 +169,20 @@ public class ShareDialog extends CommonDialog implements
     @SuppressWarnings("deprecation")
     private void shareToWeiChat() {
 
-
-
         LogCp.i(LogCp.CP,ShareDialog.class + " 来分享到weChat  " + title + content + link  + share_img_url);
 
-//
        UMImage image = new UMImage(mActivity, share_img_url);
-//
-//        new ShareAction(mActivity).setPlatform(SHARE_MEDIA.WEIXIN)
-//                .withText(content)
-//                .withTitle(title)
-//                .withTargetUrl(link)
-//                .withMedia(image)
-//                .setCallback(umShareListener)
-//                .share();
-//
-//
 
-
-
-        UmengTool.checkWx(mActivity);
-//
-
-
-        new ShareAction(mActivity)
+        new ShareAction(mActivity).setPlatform(SHARE_MEDIA.WEIXIN)
                 .withText(content)
                 .withTitle(title)
                 .withTargetUrl(link)
                 .withMedia(image)
                 .setCallback(umShareListener)
-                .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN)
-                .setCallback(umShareListener).open();
+                .share();
 
 
 
-
-        // 添加微信平台
-//        UMWXHandler wxHandler = new UMWXHandler(this.context,
-//                Config.WEICHAT_APPID,Config.WEICHAT_SECRET);
-//        wxHandler.addToSocialSDK();
-//        // 设置微信好友分享内容
-//        WeiXinShareContent weixinContent = new WeiXinShareContent();
-//        // 设置分享文字
-//        weixinContent.setShareContent(this.content);
-//        // 设置title
-//        weixinContent.setTitle(this.title);
-//        // 设置分享内容跳转URL
-//        weixinContent.setTargetUrl(this.link);
-//        // 设置分享图片
-//        weixinContent.setShareImage(getShareImg());
-//        mController.setShareMedia(weixinContent);
-//        mController.postShare(this.context, SHARE_MEDIA.WEIXIN, null);
     }
 
     private void shareToSinaWeibo() {
