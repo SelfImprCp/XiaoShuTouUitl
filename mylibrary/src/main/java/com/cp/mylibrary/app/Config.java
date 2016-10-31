@@ -10,8 +10,8 @@ import java.io.File;
 public class Config {
      public static int PAGE_SIXE = 20;
 
-     public static final String WEICHAT_APPID = "wx744cc51b4beacc83";
-     public static final String WEICHAT_SECRET = "85b3190f2c55026312cea022e465e05a";
+     public static final String WEICHAT_APPID = "wx6a54a8cecdce38e9";
+     public static final String WEICHAT_SECRET = "9f67580ae92be8fe3260e0c9b06eff09";
 
      // 默认存放文件下载的路径
      public final static String DEFAULT_SAVE_FILE_PATH = Environment
