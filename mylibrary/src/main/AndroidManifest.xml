@@ -68,12 +68,7 @@
             android:exported="false"></service>
 
 
-        <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <!-- alipay callback-->
         <activity
             android:name="com.tencent.tauth.AuthActivity"

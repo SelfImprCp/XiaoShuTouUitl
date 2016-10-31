@@ -18,6 +18,8 @@ public class Config {
      public static final String SINA_SECRET = "c5129ecd0f20bc26a64a48316d36ab04";
 
 
+
+
      // 默认存放文件下载的路径
      public final static String DEFAULT_SAVE_FILE_PATH = Environment
              .getExternalStorageDirectory()

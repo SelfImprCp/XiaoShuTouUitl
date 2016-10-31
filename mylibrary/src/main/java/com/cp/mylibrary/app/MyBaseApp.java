@@ -20,6 +20,8 @@ public class MyBaseApp extends Application {
         //豆瓣RENREN平台目前只能在服务器端配置
         //新浪微博
         PlatformConfig.setSinaWeibo(Config.SINA_APPID, Config.SINA_SECRET);
+
+
 //        //易信
 //        PlatformConfig.setYixin("yxc0614e80c9304c11b0391514d09f13bf");
 //        PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");

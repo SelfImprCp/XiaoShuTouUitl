@@ -198,6 +198,8 @@ public class ShareDialog extends CommonDialog implements
                 .setCallback(umShareListener)
                 .share();
 
+
+
         // 设置新浪微博SSO handler
 //        SinaSsoHandler sinaSsoHandler = new SinaSsoHandler();
 //        sinaSsoHandler.setTargetUrl(this.link);
