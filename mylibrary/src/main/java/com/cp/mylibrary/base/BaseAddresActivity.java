@@ -175,16 +175,16 @@ public class BaseAddresActivity extends MyBaseActivity {
 
                     }
 
-                    LogCp.i(LogCp.CP,
-                            BaseAddresActivity.class + " 当前的市  " + city.getRname() + "当前市下有多少区：" + newAreasList.size());
+//                    LogCp.i(LogCp.CP,
+//                            BaseAddresActivity.class + " 当前的市  " + city.getRname() + "当前市下有多少区：" + newAreasList.size());
 
                     mDistrictDatasMap.put(city.getRname(), newAreasList);
                 }
             }
 
 
-            LogCp.i(LogCp.CP,
-                    BaseAddresActivity.class + " 当前的省  " + province.getRname() + "当前省下有多少市" + newCitysList.size());
+//            LogCp.i(LogCp.CP,
+//                    BaseAddresActivity.class + " 当前的省  " + province.getRname() + "当前省下有多少市" + newCitysList.size());
 
             mCitisDatasMap.put(province.getRname(), newCitysList);
 
@@ -233,10 +233,10 @@ public class BaseAddresActivity extends MyBaseActivity {
             for (AreaBean cityBean : citysList) {
 
 
-                LogCp.i(LogCp.CP, BaseAddresActivity.class +
-                        "  当前省的id   " + areaBean.getId() +
-                        " 当前市的" + cityBean.getRname() + cityBean.getPid()
-                );
+//                LogCp.i(LogCp.CP, BaseAddresActivity.class +
+//                        "  当前省的id   " + areaBean.getId() +
+//                        " 当前市的" + cityBean.getRname() + cityBean.getPid()
+//                );
 
 
                 if (areaBean.getId() ==cityBean.getPid()) {
