@@ -298,8 +298,8 @@ public class DownloadService extends Service {
                 totalSize += readsize;
                 // 为了防止频繁的通知导致应用吃紧，百分比增加10才通知一次
                 if ((downloadCount == 0)
-                        || (int) (totalSize * 100 / updateTotalSize) - 10 >= downloadCount) {
-                    downloadCount += 10;
+                        || (int) (totalSize * 100 / updateTotalSize) - 5 >= downloadCount) {
+                    downloadCount += 5;
 
 
                     LogCp.i(LogCp.CP, DownloadService.this + "   下载  更新进度  " + downloadCount);

@@ -151,6 +151,15 @@ public class MyBaseActivity extends KJActivity {
 
     }
 
+//
+//    /**
+//     *  初始化字体
+//     */
+//    protected void initFont() {
+//
+//    }
+
+
     /**
      * 子类复写，初始化数据
      */
