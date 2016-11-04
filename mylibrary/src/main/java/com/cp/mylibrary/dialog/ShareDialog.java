@@ -57,7 +57,7 @@ public class ShareDialog extends CommonDialog implements
         this.context = context;
     }
 
-    public ShareDialog(Context context, Activity activity ) {
+    public ShareDialog(Context context, Activity activity) {
         this(context);
 
         this.context = context;
@@ -73,7 +73,7 @@ public class ShareDialog extends CommonDialog implements
         this.context = context;
         View shareView = getLayoutInflater().inflate(
                 R.layout.dialog_cotent_share, null);
-//        shareView.findViewById(R.id.ly_share_qq).setOnClickListener(this);
+        shareView.findViewById(R.id.ly_share_qq).setOnClickListener(this);
 //        shareView.findViewById(R.id.ly_share_copy_link)
 //                .setOnClickListener(this);
 //        shareView.findViewById(R.id.ly_share_more_option).setOnClickListener(
@@ -136,7 +136,7 @@ public class ShareDialog extends CommonDialog implements
         }
 
         if (v.getId() == R.id.ly_share_qq) {
-
+            shareToQQ();
 
         }
 
@@ -148,7 +148,7 @@ public class ShareDialog extends CommonDialog implements
     @SuppressWarnings("deprecation")
     private void shareToWeiChatCircle() {
 
-         LogCp.i(LogCp.CP,ShareDialog.class + " 来分享到weChat 朋友圈" + title + content + link  + share_img_url);
+        LogCp.i(LogCp.CP, ShareDialog.class + " 来分享到weChat 朋友圈" + title + content + link + share_img_url);
 
 
         UMImage image = new UMImage(mActivity, share_img_url);
@@ -162,16 +162,14 @@ public class ShareDialog extends CommonDialog implements
                 .share();
 
 
-
-
     }
 
     @SuppressWarnings("deprecation")
     private void shareToWeiChat() {
 
-        LogCp.i(LogCp.CP,ShareDialog.class + " 来分享到weChat  " + title + content + link  + share_img_url);
+        LogCp.i(LogCp.CP, ShareDialog.class + " 来分享到weChat  " + title + content + link + share_img_url);
 
-       UMImage image = new UMImage(mActivity, share_img_url);
+        UMImage image = new UMImage(mActivity, share_img_url);
 
         new ShareAction(mActivity).setPlatform(SHARE_MEDIA.WEIXIN)
                 .withText(content)
@@ -180,7 +178,6 @@ public class ShareDialog extends CommonDialog implements
                 .withMedia(image)
                 .setCallback(umShareListener)
                 .share();
-
 
 
     }
@@ -199,53 +196,19 @@ public class ShareDialog extends CommonDialog implements
                 .share();
 
 
-
-        // 设置新浪微博SSO handler
-//        SinaSsoHandler sinaSsoHandler = new SinaSsoHandler();
-//        sinaSsoHandler.setTargetUrl(this.link);
-//        mController.setShareType(ShareType.SHAKE);
-//        mController.setShareContent(this.content + " " + this.link);
-//        mController.setShareImage(getShareImg());
-//        mController.getConfig().setSsoHandler(sinaSsoHandler);
-//
-//        if (OauthHelper.isAuthenticated(this.context, SHARE_MEDIA.SINA)) {
-//            mController.directShare(this.context, SHARE_MEDIA.SINA, null);
-//        } else {
-//            mController.doOauthVerify(this.context, SHARE_MEDIA.SINA,
-//                    new SocializeListeners.UMAuthListener() {
-//
-//                        @Override
-//                        public void onStart(SHARE_MEDIA arg0) {
-//                        }
-//
-//                        @Override
-//                        public void onError(SocializeException arg0,
-//                                            SHARE_MEDIA arg1) {
-//                        }
-//
-//                        @Override
-//                        public void onComplete(Bundle arg0, SHARE_MEDIA arg1) {
-//                            mController.directShare(ShareDialog.this.context, SHARE_MEDIA.SINA,
-//                                    null);
-//                        }
-//
-//                        @Override
-//                        public void onCancel(SHARE_MEDIA arg0) {
-//                        }
-//                    });
-//        }
     }
 
-//    private void shareToQQ() {
-//        UMQQSsoHandler qqSsoHandler = new UMQQSsoHandler((Activity) this.context,
-//                Constants.QQ_APPID, Constants.QQ_APPKEY);
-//        qqSsoHandler.setTargetUrl(this.link);
-//        qqSsoHandler.setTitle(this.title);
-//        qqSsoHandler.addToSocialSDK();
-//        mController.setShareContent(this.content);
-//        mController.setShareImage(getShareImg());
-//        mController.postShare(this.context, SHARE_MEDIA.QQ, null);
-//    }
+    private void shareToQQ() {
+        UMImage image = new UMImage(mActivity, share_img_url);
+
+        new ShareAction(mActivity).setPlatform(SHARE_MEDIA.QQ)
+                .withText(content)
+                .withTitle(title)
+                .withTargetUrl(link)
+                .withMedia(image)
+                .setCallback(umShareListener)
+                .share();
+    }
 
 
     private UMShareListener umShareListener = new UMShareListener() {
