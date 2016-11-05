@@ -17,6 +17,11 @@ public class Config {
      public static final String SINA_APPID = "3182205453";
      public static final String SINA_SECRET = "c5129ecd0f20bc26a64a48316d36ab04";
 
+     public static final String QQ_APPID = "1105802898";
+     public static final String QQ_APPKEY = "dw1chPVQZ9YmBAkv";
+
+
+
 
 
 

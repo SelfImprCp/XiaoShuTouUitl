@@ -21,6 +21,8 @@ public class MyBaseApp extends Application {
         //新浪微博
         PlatformConfig.setSinaWeibo(Config.SINA_APPID, Config.SINA_SECRET);
 
+        PlatformConfig.setQQZone(Config.QQ_APPID,Config.QQ_APPKEY);
+
 
 //        //易信
 //        PlatformConfig.setYixin("yxc0614e80c9304c11b0391514d09f13bf");
