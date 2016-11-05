@@ -33,7 +33,7 @@
         <LinearLayout
             android:id="@+id/ly_share_qq"
             style="@style/dialog_content_share_ll"
-            android:visibility="visible">
+             >
 
             <TextView
                 style="@style/dialog_content_share_text"

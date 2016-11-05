@@ -120,18 +120,18 @@ public class ShareDialog extends CommonDialog implements
 
 
         if (v.getId() == R.id.ly_share_weichat_circle) {
-            //   shareListenr.onWeiChatCircle();
+
             shareToWeiChatCircle();
         }
 
         if (v.getId() == R.id.ly_share_weichat) {
-            // shareListenr.onWeiChat();
+
             shareToWeiChat();
         }
 
         if (v.getId() == R.id.ly_share_sina_weibo) {
 
-            //  shareListenr.onSinaWeiBo();
+
             shareToSinaWeibo();
         }
 
