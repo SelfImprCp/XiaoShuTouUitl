@@ -175,6 +175,15 @@ public class TitleBarView extends RelativeLayout {
 
 
     /**
+     *
+     * @param
+     */
+    public void setTitleBackImg(int imgId) {
+
+        titlebar_img_back.setImageResource(imgId);
+    }
+
+    /**
      *  设置返回 直接关掉当前使...活动
      * @param activity
      */
