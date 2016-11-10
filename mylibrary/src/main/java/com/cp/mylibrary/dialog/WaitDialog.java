@@ -9,16 +9,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.cp.mylibrary.R;
 import com.cp.mylibrary.utils.DensityUtils;
 import com.cp.mylibrary.utils.ScreenUtils;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
 
 
 public class WaitDialog extends Dialog {
 
 	private TextView _messageTv;
+	private ProgressBar waiting_pb;
 	private  Context mContext;
 
 	private static Boolean _isTablet = null;
@@ -72,6 +75,15 @@ public class WaitDialog extends Dialog {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		View view = LayoutInflater.from(context).inflate(R.layout.dialog_wait, null);
 		_messageTv = (TextView) view.findViewById(R.id.waiting_tv);
+
+		waiting_pb = (ProgressBar)view.findViewById(R.id.waiting_pb);
+		DoubleBounce doubleBounce = new DoubleBounce();
+		waiting_pb.setIndeterminateDrawable(doubleBounce);
+
+
+
+
+
 		setContentView(view);
 	}
 

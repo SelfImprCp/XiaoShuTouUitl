@@ -1,11 +1,7 @@
 package cn.myasapp.main.ui;
 
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
+
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;

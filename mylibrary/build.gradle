@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.SelfImprCp'
+group = 'com.github.SelfImprCp'
 
 android {
     compileSdkVersion 23
@@ -33,6 +33,13 @@ repositories {
 
 
 
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}
+
 
 
 
@@ -52,5 +59,7 @@ dependencies {
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.android.support:support-v4:23.4.0'
+
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
 
 }
