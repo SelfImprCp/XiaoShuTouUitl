@@ -66,9 +66,6 @@ public class EmptyLayout extends LinearLayout implements
 
 
 
-
-
-
 		setBackgroundColor(-1);
 		setOnClickListener(this);
 		img.setOnClickListener(new OnClickListener() {
