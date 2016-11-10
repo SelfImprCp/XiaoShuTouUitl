@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.cp.mylibrary.R;
 import com.cp.mylibrary.utils.NetWorkUtil;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
 
 
 public class EmptyLayout extends LinearLayout implements
@@ -58,6 +59,16 @@ public class EmptyLayout extends LinearLayout implements
 		mLayout = (RelativeLayout) view.findViewById(R.id.pageerrLayout);
 
 		animProgress = (ProgressBar) view.findViewById(R.id.animProgress);
+
+		DoubleBounce doubleBounce = new DoubleBounce();
+
+		animProgress.setIndeterminateDrawable(doubleBounce);
+
+
+
+
+
+
 		setBackgroundColor(-1);
 		setOnClickListener(this);
 		img.setOnClickListener(new OnClickListener() {
