@@ -9,6 +9,8 @@ import com.cp.mylibrary.utils.OpenActivityUtil;
 import cn.myasapp.main.domian.SimpleBackPage;
 
 import cn.myasapp.main.ui.DialogTestActivity;
+import cn.myasapp.main.ui.GestureLockActivity;
+import cn.myasapp.main.ui.GestureVerifyActivity;
 import cn.myasapp.main.ui.TestListViewRefreshActivity;
 import cn.myasapp.main.ui.SimpleBackActivity;
 import cn.myasapp.main.ui.TestActivity;
@@ -122,6 +124,24 @@ public class TestUIhelper {
         OpenActivityUtil.getInstance().openActivity(context,    TestRecyclerRefreshActivity
                 .class);
     }
+
+
+    public static void showGestureLockActivity(Context context) {
+        OpenActivityUtil.getInstance().openActivity(context,    GestureLockActivity
+                .class);
+    }
+
+
+    public static void showGestureVerifyActivity(Context context,String gustrue) {
+
+         Bundle bundle = new Bundle();
+        bundle.putString(GestureVerifyActivity.GESTURE,gustrue);
+
+        OpenActivityUtil.getInstance().openActivity(context,    GestureVerifyActivity
+                .class,bundle);
+    }
+
+
 
 
 

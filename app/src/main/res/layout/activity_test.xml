@@ -155,6 +155,12 @@
                 android:text=" xrefreshview_receylie_test       " />
 
 
+            <TextView
+                android:id="@+id/guestture_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试手势密码   " />
+
 
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>

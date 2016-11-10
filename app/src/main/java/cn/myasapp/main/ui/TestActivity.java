@@ -90,6 +90,11 @@ public class TestActivity extends BaseActivity {
     @BindView(id = R.id.pickview_test, click = true)
     private TextView pickview_test;
 
+
+
+    @BindView(id = R.id.guestture_test, click = true)
+    private TextView guestture_test;
+
     @BindView(id = R.id.xrefreshview_scrollview_test, click = true)
     private TextView xrefreshview_listview_test;
 
@@ -280,6 +285,14 @@ public class TestActivity extends BaseActivity {
                 TestUIhelper.showXRefreshListViewActivity(this);
                 break;
 
+
+
+            case R.id.guestture_test:
+
+                TestUIhelper.showGestureLockActivity(this);
+
+
+                break;
 
 
 
