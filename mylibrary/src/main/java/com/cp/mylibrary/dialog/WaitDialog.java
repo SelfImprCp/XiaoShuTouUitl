@@ -16,6 +16,7 @@ import com.cp.mylibrary.R;
 import com.cp.mylibrary.utils.DensityUtils;
 import com.cp.mylibrary.utils.ScreenUtils;
 import com.github.ybq.android.spinkit.style.DoubleBounce;
+import com.github.ybq.android.spinkit.style.Wave;
 
 
 public class WaitDialog extends Dialog {
