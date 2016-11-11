@@ -62,16 +62,16 @@ public class TestListViewRefreshActivity extends XRefreshListViewActivity {
     protected void requestData() {
         super.requestData();
 
-        TestApi.getTestPageList(mCurrentPage + "", responseHandler);
+//        TestApi.getTestPageList(mCurrentPage + "", responseHandler);
 
     }
 
     @Override
     protected List parseList(String is) {
+//
+//        MainFocusListRes res = GsonUtil.jsonStrToBean(is, MainFocusListRes.class);
 
-        MainFocusListRes res = GsonUtil.jsonStrToBean(is, MainFocusListRes.class);
-
-        return res.getResult();
+        return null;
     }
 
 
