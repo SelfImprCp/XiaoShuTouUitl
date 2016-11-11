@@ -77,7 +77,7 @@ public class WaitDialog extends Dialog {
 		_messageTv = (TextView) view.findViewById(R.id.waiting_tv);
 
 		waiting_pb = (ProgressBar)view.findViewById(R.id.waiting_pb);
-		DoubleBounce doubleBounce = new DoubleBounce();
+		Wave doubleBounce = new Wave();
 		waiting_pb.setIndeterminateDrawable(doubleBounce);
 
 

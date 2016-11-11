@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.cp.mylibrary.R;
 import com.cp.mylibrary.utils.NetWorkUtil;
 import com.github.ybq.android.spinkit.style.DoubleBounce;
+import com.github.ybq.android.spinkit.style.Wave;
 
 
 public class EmptyLayout extends LinearLayout implements
@@ -60,7 +61,7 @@ public class EmptyLayout extends LinearLayout implements
 
 		animProgress = (ProgressBar) view.findViewById(R.id.animProgress);
 
-		DoubleBounce doubleBounce = new DoubleBounce();
+		Wave doubleBounce = new Wave();
 
 		animProgress.setIndeterminateDrawable(doubleBounce);
 
