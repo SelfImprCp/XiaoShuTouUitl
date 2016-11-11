@@ -37,6 +37,9 @@ public class EmptyLayout extends LinearLayout implements
 	private String strNoDataContent = "";
 	private int imgResource = 0;
 	private TextView tv;
+	private LinearLayout error_load_fail_lin;
+	private LinearLayout error_loading_lin;
+
 
 	public EmptyLayout(Context context) {
 		super(context);
@@ -55,6 +58,9 @@ public class EmptyLayout extends LinearLayout implements
 		img = (ImageView) view.findViewById(R.id.img_error_layout);
 		tv = (TextView) view.findViewById(R.id.tv_error_layout);
 
+		error_loading_lin = (LinearLayout) view.findViewById(R.id.error_loading_lin);
+		error_load_fail_lin = (LinearLayout) view.findViewById(R.id.error_load_fail_lin);
+
 		error_nodata_layout = (RelativeLayout) view
 				.findViewById(R.id.error_nodata_layout);
 		mLayout = (RelativeLayout) view.findViewById(R.id.pageerrLayout);
@@ -64,7 +70,6 @@ public class EmptyLayout extends LinearLayout implements
 		Wave doubleBounce = new Wave();
 
 		animProgress.setIndeterminateDrawable(doubleBounce);
-
 
 
 		setBackgroundColor(-1);
@@ -145,53 +150,67 @@ public class EmptyLayout extends LinearLayout implements
 	public void setErrorType(int i) {
 		setVisibility(View.VISIBLE);
 		switch (i) {
-		case NETWORK_ERROR:
-			mErrorState = NETWORK_ERROR;
-			// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"pagefailed_bg"));
-			if (NetWorkUtil.hasInternetConnected(context)) {
-				tv.setText(R.string.error_view_load_error_click_to_refresh);
-				img.setBackgroundResource(R.drawable.pagefailed_bg);
-			} else {
-				tv.setText(R.string.error_view_network_error_click_to_refresh);
-				img.setBackgroundResource(R.drawable.wangluo_not);
-			}
-			img.setVisibility(View.VISIBLE);
-			animProgress.setVisibility(View.GONE);
-			clickEnable = true;
-			break;
-		//正在加载的显示
-		case NETWORK_LOADING:
-			mErrorState = NETWORK_LOADING;
-			// animProgress.setBackgroundDrawable(SkinsUtil.getDrawable(context,"loadingpage_bg"));
-			animProgress.setVisibility(View.VISIBLE);
-			img.setVisibility(View.GONE);
-			tv.setText(R.string.error_view_loading);
-			clickEnable = false;
-			break;
-		//没有数据 的显示
-		case NODATA:
-			mErrorState = NODATA;
-			// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"page_icon_empty"));
-			//img.setBackgroundResource(R.drawable.page_icon_empty);
-			img.setVisibility(View.VISIBLE);
-			animProgress.setVisibility(View.GONE);
-			setTvNoDataContent();
-			clickEnable = true;
-			break;
-		case HIDE_LAYOUT:
-			setVisibility(View.GONE);
-			break;
-		case NODATA_ENABLE_CLICK:
-			mErrorState = NODATA_ENABLE_CLICK;
-			//	img.setBackgroundResource(R.drawable.page_icon_empty);
-			// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"page_icon_empty"));
-			img.setVisibility(View.VISIBLE);
-			animProgress.setVisibility(View.GONE);
-			setTvNoDataContent();
-			clickEnable = true;
-			break;
-		default:
-			break;
+			case NETWORK_ERROR:
+				mErrorState = NETWORK_ERROR;
+				error_load_fail_lin.setVisibility(View.VISIBLE);
+				error_loading_lin.setVisibility(View.GONE);
+
+
+				// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"pagefailed_bg"));
+				if (NetWorkUtil.hasInternetConnected(context)) {
+					tv.setText(R.string.error_view_load_error_click_to_refresh);
+					img.setBackgroundResource(R.drawable.pagefailed_bg);
+				} else {
+					tv.setText(R.string.error_view_network_error_click_to_refresh);
+					img.setBackgroundResource(R.drawable.wangluo_not);
+				}
+				img.setVisibility(View.VISIBLE);
+				animProgress.setVisibility(View.GONE);
+				clickEnable = true;
+				break;
+			//正在加载的显示
+			case NETWORK_LOADING:
+				error_load_fail_lin.setVisibility(View.GONE);
+				error_loading_lin.setVisibility(View.VISIBLE);
+
+				mErrorState = NETWORK_LOADING;
+				// animProgress.setBackgroundDrawable(SkinsUtil.getDrawable(context,"loadingpage_bg"));
+				animProgress.setVisibility(View.VISIBLE);
+				img.setVisibility(View.GONE);
+				tv.setText(R.string.error_view_loading);
+				clickEnable = false;
+				break;
+			//没有数据 的显示
+			case NODATA:
+				error_load_fail_lin.setVisibility(View.VISIBLE);
+				error_loading_lin.setVisibility(View.GONE);
+
+
+				mErrorState = NODATA;
+				// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"page_icon_empty"));
+				//img.setBackgroundResource(R.drawable.page_icon_empty);
+				img.setVisibility(View.VISIBLE);
+				animProgress.setVisibility(View.GONE);
+				setTvNoDataContent();
+				clickEnable = true;
+				break;
+			case HIDE_LAYOUT:
+				setVisibility(View.GONE);
+				break;
+			case NODATA_ENABLE_CLICK:
+				error_load_fail_lin.setVisibility(View.VISIBLE);
+				error_loading_lin.setVisibility(View.GONE);
+
+				mErrorState = NODATA_ENABLE_CLICK;
+				//	img.setBackgroundResource(R.drawable.page_icon_empty);
+				// img.setBackgroundDrawable(SkinsUtil.getDrawable(context,"page_icon_empty"));
+				img.setVisibility(View.VISIBLE);
+				animProgress.setVisibility(View.GONE);
+				setTvNoDataContent();
+				clickEnable = true;
+				break;
+			default:
+				break;
 		}
 
 		try {
@@ -226,9 +245,9 @@ public class EmptyLayout extends LinearLayout implements
 
 	/**
 	 * 新添设置背景
-	 * 
+	 *
 	 * @author 火蚁 2015-1-27 下午2:14:00
-	 * 
+	 *
 	 */
 	// public void setErrorImag() {
 	//
