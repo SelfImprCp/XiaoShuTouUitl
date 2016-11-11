@@ -40,7 +40,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_cp_util"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/login_layout_btn_white_bottom"
         android:orientation="vertical">
 
 
@@ -70,18 +71,18 @@
             <Button
                 android:id="@+id/base_version_dialog_cannel_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/dialog_cances_bg"
                 android:text="取消"
                 android:textColor="@color/black_color_30"
-                android:textSize="@dimen/text_size_14" />
+                android:textSize="@dimen/text_size_15" />
 
             <Button
                 android:id="@+id/base_version_dialog_sure_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@drawable/dialog_query_bg"
                 android:paddingLeft="@dimen/space_2"
@@ -89,7 +90,7 @@
                 android:text="确定"
                 android:textColor="@color/white_cp_util"
 
-                android:textSize="@dimen/text_size_14" />
+                android:textSize="@dimen/text_size_15" />
         </LinearLayout>
 
 

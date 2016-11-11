@@ -192,23 +192,23 @@ public class DialogTestActivity extends BaseActivity {
 //
 
 
-//                WaitDialog waitDialog = DialogHelper.getWaitDialog(DialogTestActivity.this,"加载中...");
-//                 waitDialog.show();
+                WaitDialog waitDialog = DialogHelper.getWaitDialog(DialogTestActivity.this,"加载中...");
+                 waitDialog.show();
 
 
-            Dialog    simplecDialog = BasicDialog.versionDialog(DialogTestActivity.this, "发现新版本:",
-                        "有新处，，，", "立即更新", "下次再说", new View.OnClickListener() {
-
-                            @Override
-                            public void onClick(View arg0) {
-
-
-
-
-                            }
-                        }).getConfigDialog();
-
-                simplecDialog.show();
+//            Dialog    simplecDialog = BasicDialog.versionDialog(DialogTestActivity.this, "发现新版本:",
+//                        "有新处，，，", "立即更新", "下次再说", new View.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(View arg0) {
+//
+//
+//
+//
+//                            }
+//                        }).getConfigDialog();
+//
+//                simplecDialog.show();
 
 
                 break;
