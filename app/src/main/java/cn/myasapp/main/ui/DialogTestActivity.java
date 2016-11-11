@@ -11,6 +11,7 @@ import com.cp.mylibrary.dialog.DialogHelper;
 
 import com.cp.mylibrary.dialog.EditTextDialog;
 import com.cp.mylibrary.dialog.ShareDialog;
+import com.cp.mylibrary.dialog.WaitDialog;
 import com.cp.mylibrary.interf.ShareListener;
 import com.cp.mylibrary.pullto.XRefreshView;
 import com.cp.mylibrary.utils.LogCp;
@@ -179,13 +180,22 @@ public class DialogTestActivity extends BaseActivity {
 
             case R.id.dialog_share:
 
-                if (mDialog == null)
-                    mDialog = new ShareDialog(this  ,this);
-                mDialog.setShareInfo("标题","内容","www.baidu.com","http://img0.imgtn.bdimg.com/it/u=1126541908,2603454962&fm=21&gp=0.jpg");
-                mDialog.setCancelable(true);
-                mDialog.setCanceledOnTouchOutside(true);
-                mDialog.setTitle(R.string.share_to);
-                mDialog.show();
+//                if (mDialog == null)
+//                    mDialog = new ShareDialog(this  ,this);
+//                mDialog.setShareInfo("标题","内容","www.baidu.com","http://img0.imgtn.bdimg.com/it/u=1126541908,2603454962&fm=21&gp=0.jpg");
+//                mDialog.setCancelable(true);
+//                mDialog.setCanceledOnTouchOutside(true);
+//                mDialog.setTitle(R.string.share_to);
+//                mDialog.show();
+//
+//
+
+
+                WaitDialog waitDialog = DialogHelper.getWaitDialog(DialogTestActivity.this,"加载中...");
+                 waitDialog.show();
+
+
+
                 break;
 
         }
