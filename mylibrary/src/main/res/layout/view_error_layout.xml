@@ -47,10 +47,10 @@
                 android:gravity="center"
                 android:lines="2"
 
-                android:padding="@dimen/space_6"
+
 
                 android:text="@string/error_view_click_to_refresh"
-                android:textColor="#333333"
+                android:textColor="@color/white_cp_util"
                 android:textSize="@dimen/text_size_16" />
 
 
