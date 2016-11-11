@@ -233,7 +233,7 @@ public abstract class UpdateManagerUtil {
 		 * } }); dialog.show();
 		 */
 
-        simplecDialog = BasicDialog.versionDialog(mContext, "发现新版本",
+        simplecDialog = BasicDialog.versionDialog(mContext, "发现新版本:"+updateRes.getVersion(),
                 updateRes.getDesc(), "立即更新", "下次再说", new OnClickListener() {
 
                     @Override
