@@ -233,6 +233,7 @@ public abstract class UpdateManagerUtil {
 		 * } }); dialog.show();
 		 */
 
+
         simplecDialog = BasicDialog.versionDialog(mContext, "发现新版本:"+updateRes.getVersion(),
                 updateRes.getDesc(), "立即更新", "下次再说", new OnClickListener() {
 
@@ -240,7 +241,7 @@ public abstract class UpdateManagerUtil {
                     public void onClick(View arg0) {
 
 
-                        if (arg0.getId() == R.id.base_config_dialog_sure_btn)
+                        if (arg0.getId() == R.id.base_version_dialog_sure_btn)
 
                         {
                             // 启动下载新版本的服务
@@ -249,7 +250,7 @@ public abstract class UpdateManagerUtil {
 
                             ShowToastUtil.showToast(mContext, "开始下载新版本，下载完后会自动安装");
                             simplecDialog.dismiss();
-                        } else if (arg0.getId() == R.id.base_config_dialog_cannel_btn) {
+                        } else if (arg0.getId() == R.id.base_version_dialog_cannel_btn) {
                             simplecDialog.dismiss();
                         }
 
@@ -258,6 +259,9 @@ public abstract class UpdateManagerUtil {
                 }).getConfigDialog();
 
         simplecDialog.show();
+
+
+
 
     }
 

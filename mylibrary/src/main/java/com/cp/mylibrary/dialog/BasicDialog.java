@@ -135,20 +135,20 @@ public class BasicDialog {
 				R.layout.base_version_dialog, null);
 		// 设置标题
 		TextView title_tv = (TextView) dialogLayout
-				.findViewById(R.id.base_config_dialog_title);
+				.findViewById(R.id.base_version_dialog_title);
 		title_tv.setText(title);
 		// 设置内容
 		TextView msg_tv = (TextView) dialogLayout
-				.findViewById(R.id.base_config_dialog_txt);
+				.findViewById(R.id.base_version_dialog_txt);
 		msg_tv.setVisibility(View.VISIBLE);
 		msg_tv.setText(msg);
 		Button cancelbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_cannel_btn);
+				.findViewById(R.id.base_version_dialog_cannel_btn);
 		if (leftStr != null) {
 			cancelbtn.setText(leftStr);
 		}
 		Button delbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_sure_btn);
+				.findViewById(R.id.base_version_dialog_sure_btn);
 		if (rightStr != null) {
 			delbtn.setText(rightStr);
 		}
@@ -182,13 +182,13 @@ public class BasicDialog {
 				.findViewById(R.id.base_config_dialog_txt);
 		msg_tv.setVisibility(View.VISIBLE);
 		msg_tv.setText(msg);
-		Button cancelbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_cannel_btn);
+		TextView cancelbtn = (TextView) dialogLayout
+				.findViewById(R.id.base_config_dialog_cannel_btn_b);
 		if (leftStr != null) {
 			cancelbtn.setText(leftStr);
 		}
-		Button delbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_sure_btn);
+		TextView delbtn = (TextView) dialogLayout
+				.findViewById(R.id.base_config_dialog_sure_btn_b);
 		if (rightStr != null) {
 			delbtn.setText(rightStr);
 		}
@@ -218,13 +218,13 @@ public class BasicDialog {
 				.findViewById(R.id.edit_config_dialog_txt);
 		msg_tv.setVisibility(View.VISIBLE);
 		msg_tv.setText(msg);
-		Button cancelbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_cannel_btn);
+		TextView cancelbtn = (TextView) dialogLayout
+				.findViewById(R.id.base_config_dialog_cannel_btn_b);
 		if (leftStr != null) {
 			cancelbtn.setText(leftStr);
 		}
-		Button delbtn = (Button) dialogLayout
-				.findViewById(R.id.base_config_dialog_sure_btn);
+		TextView delbtn = (TextView) dialogLayout
+				.findViewById(R.id.base_config_dialog_sure_btn_b);
 		if (rightStr != null) {
 			delbtn.setText(rightStr);
 		}
