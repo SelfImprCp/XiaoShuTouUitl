@@ -111,6 +111,21 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
+
+    /**
+     * 为TextView设置字符串
+     *
+     * @param viewId
+     * @param text
+     * @return
+     */
+    public ViewHolder setHint(int viewId, String text) {
+        TextView view = getView(viewId);
+        view.setHint(text);
+        return this;
+    }
+
+
     /**
      * 为ImageView设置图片
      *
