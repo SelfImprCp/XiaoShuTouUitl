@@ -579,7 +579,7 @@ public class IDCardUitl {
         int month = currentDay.get(Calendar.MONTH) + 1;
         int day = currentDay.get(Calendar.DAY_OF_MONTH);
 
-        return year + month + day + "";
+        return year + "-"+month + "-"+ day + "";
 
     }
 
