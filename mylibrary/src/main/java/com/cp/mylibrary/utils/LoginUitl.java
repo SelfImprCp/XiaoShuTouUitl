@@ -15,6 +15,12 @@ import com.cp.mylibrary.R;
 public class LoginUitl {
 
 
+    /**
+     *  显示还是隐藏EditText 中输入的内容
+     * @param passWordIsShow
+     * @param register_input_password
+     * @return
+     */
     public static boolean showOrHidePassWord(boolean passWordIsShow, EditText register_input_password) {
 
 

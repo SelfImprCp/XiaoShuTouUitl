@@ -74,7 +74,7 @@ public class DateTimeUtil {
     }
 
     /**
-     * 获取当前时间为每年第几周
+     * 获取指定时间为每年第几周
      *
      * @param date
      * @return

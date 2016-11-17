@@ -34,6 +34,7 @@ public class DateTimePickDialogUtil implements DatePicker.OnDateChangedListener,
      *
      * @param activity     ：调用的父activity
      * @param initDateTime 初始日期时间值，作为弹出窗口的标题和日期时间初始值
+     *                     对话框显示的标题
      */
     public DateTimePickDialogUtil(Activity activity, String initDateTime, String dialogTitle) {
         this.activity = activity;

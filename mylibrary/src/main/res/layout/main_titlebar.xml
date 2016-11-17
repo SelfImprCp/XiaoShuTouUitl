@@ -58,6 +58,8 @@
         android:textSize="18sp"
         android:visibility="gone" />
 
+
+
     <ImageView
         android:id="@+id/titlebar_img_back"
         style="@style/titlebar_img"
@@ -68,6 +70,7 @@
         android:layout_marginLeft="10dp"
         android:clickable="true"
 
+        android:padding="-5dp"
         android:src="@drawable/return_back_black" />
 
     <ImageView

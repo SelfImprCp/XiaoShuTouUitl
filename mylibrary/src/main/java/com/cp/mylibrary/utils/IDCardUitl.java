@@ -593,7 +593,7 @@ public class IDCardUitl {
      * @throws ParseException
      */
 
-    public static String hideId(String ID) {
+    public static String hideId(String ID   ) {
 
 
         String regex = "(\\w{6})(\\w+)(\\w{4})";
