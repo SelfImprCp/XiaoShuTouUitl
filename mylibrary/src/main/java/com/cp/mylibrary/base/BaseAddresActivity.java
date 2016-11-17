@@ -113,17 +113,7 @@ public class BaseAddresActivity extends MyBaseActivity {
 
                 + areasList.size());
 
-        // List<ProvinceModel> provinceList = null;
-        // AssetManager asset = getAssets();
 
-        // InputStream input = asset.open("province_data.xml");
-        // 创建一个解析xml的工厂对象
-        // SAXParserFactory spf = SAXParserFactory.newInstance();
-        // 解析xml
-        // SAXParser parser = spf.newSAXParser();
-        // XmlParserHandler handler = new XmlParserHandler();
-        // parser.parse(input, handler);
-        // input.close();
 
 
         // 所有省的名字

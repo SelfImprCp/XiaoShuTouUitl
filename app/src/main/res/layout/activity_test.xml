@@ -162,6 +162,15 @@
                 android:text="  测试手势密码   " />
 
 
+            <TextView
+                android:id="@+id/date_select_test"
+
+                style="@style/test_textview_style"
+                android:text="  测试选择时间   " />
+
+
+
+
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>
 

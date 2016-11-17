@@ -1,10 +1,13 @@
 package cn.myasapp.main.ui;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
+import com.cp.mylibrary.utils.DateTimePickDialogUtil;
+import com.cp.mylibrary.utils.LogCp;
 import com.cp.mylibrary.utils.ShowToastUtil;
 import com.cp.mylibrary.utils.UpdateManagerUtil;
 
@@ -100,6 +103,10 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.xrefreshview_receylie_test, click = true)
     private TextView xrefreshview_receylie_test;
+
+
+    @BindView(id = R.id.date_select_test, click = true)
+    private TextView date_select_test;
 
 
 
@@ -293,6 +300,33 @@ public class TestActivity extends BaseActivity {
 
 
                 break;
+
+
+
+            case R.id.date_select_test:
+                  String initStartDateTime = "2013-09-03"; // 初始化开始时间
+                  String initEndDateTime = "2014-08-23"; // 初始化结束时间
+                final DateTimePickDialogUtil dateTimePicKDialog = new DateTimePickDialogUtil(
+                        TestActivity.this, initEndDateTime,"选择时间");
+                dateTimePicKDialog.dateTimePicKDialog(initStartDateTime, initEndDateTime, "确认", "取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                      String str  =   dateTimePicKDialog.getSelectDate();
+
+                        LogCp.i(LogCp.CP,TestActivity.class + "选择的日期 " + str);
+
+                    }
+                }, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+
+                break;
+
 
 
 
