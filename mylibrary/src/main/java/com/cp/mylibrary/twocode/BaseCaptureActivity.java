@@ -403,7 +403,6 @@ public class BaseCaptureActivity extends MyBaseActivity implements
 
     @Override
     public void initData() {
-        // TODO Auto-generated method stub
 
     }
 }

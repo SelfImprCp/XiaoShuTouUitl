@@ -34,8 +34,7 @@ public class ViewFactory {
 
 					@Override
 					public void onLoadingStarted(String imageUri, View view) {
-						// TODO Auto-generated method stub
-						//imageView.setImageResource(R.drawable.banner_default);
+					 			//imageView.setImageResource(R.drawable.banner_default);
 					}
 
 					@Override

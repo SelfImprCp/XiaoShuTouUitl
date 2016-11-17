@@ -50,7 +50,7 @@ public class ImagePreviewActivity extends MyBaseActivity {
 
 	@Override
 	public void initWidget() {
-		// TODO Auto-generated method stub
+
 		super.initWidget();
 
 		mImageUrls = getIntent().getStringArrayExtra(BUNDLE_KEY_IMAGES);
@@ -87,7 +87,7 @@ public class ImagePreviewActivity extends MyBaseActivity {
 
 			@Override
 			public void onItemClicked(View view, int position) {
-				// TODO Auto-generated method stub finish();
+
  finish();
 			}
 		});

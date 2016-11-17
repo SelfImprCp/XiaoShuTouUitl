@@ -44,7 +44,6 @@ public class NoIntentView extends RelativeLayout {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 
 				 NetWorkUtil netWorkUtil = new NetWorkUtil();
 
