@@ -1,8 +1,14 @@
 package com.cp.mylibrary.base;
 
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
 import com.cp.mylibrary.bean.ProvinceBean;
+import com.cp.mylibrary.city.ScrollerNumberPicker;
 import com.cp.mylibrary.res.AreaRes;
 import com.cp.mylibrary.utils.GsonUtil;
 import com.cp.mylibrary.utils.LogCp;
@@ -278,6 +284,42 @@ public class BaseAddresActivity extends MyBaseActivity {
 
 
     }
+
+
+//    public void showSelectAreaXST(View.OnClickListener onClickListener) {
+//
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(TestActivity.this);
+//        View view = LayoutInflater.from(TestActivity.this).inflate(R.layout.addressdialog, null);
+//        builder.setView(view);
+//        LinearLayout addressdialog_linearlayout = (LinearLayout) view.findViewById(R.id.addressdialog_linearlayout);
+//        final ScrollerNumberPicker provincePicker = (ScrollerNumberPicker) view.findViewById(R.id.province);
+//        final ScrollerNumberPicker cityPicker = (ScrollerNumberPicker) view.findViewById(R.id.city);
+//        final ScrollerNumberPicker counyPicker = (ScrollerNumberPicker) view.findViewById(R.id.couny);
+//        final AlertDialog dialog = builder.show();
+//
+//        addressdialog_linearlayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+////                        textid.setText(provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
+////                        Log.i("kkkk",provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
+////                        dialog.dismiss();
+//                LogCp.i(LogCp.CP, TestActivity.class + "选择的区：" + provincePicker.getSelectedText() + ",," + provincePicker.getSelected());
+//
+//
+//            }
+//        });
+//
+//    }
+
+
+
+
+
+
+
+
 
 
 }

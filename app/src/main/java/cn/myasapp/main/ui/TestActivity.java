@@ -3,20 +3,23 @@ package cn.myasapp.main.ui;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cp.mylibrary.city.ScrollerNumberPicker;
 import com.cp.mylibrary.utils.DateTimePickDialogUtil;
 import com.cp.mylibrary.utils.LogCp;
-import com.cp.mylibrary.utils.ShowToastUtil;
-import com.cp.mylibrary.utils.UpdateManagerUtil;
+
 
 import org.kymjs.kjframe.ui.BindView;
 
 import cn.myasapp.main.R;
 import cn.myasapp.main.TestUIhelper;
 import cn.myasapp.main.bean.UserBean;
-import cn.myasapp.main.event.TestEvent;
 
 
 /**
@@ -103,6 +106,10 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.date_select_test, click = true)
     private TextView date_select_test;
+
+
+    @BindView(id = R.id.city_select_test, click = true)
+    private TextView city_select_test;
 
 
     @Override
@@ -308,6 +315,32 @@ public class TestActivity extends BaseActivity {
                 });
 
 
+                break;
+
+
+            case R.id.city_select_test:
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(TestActivity.this);
+                View view = LayoutInflater.from(TestActivity.this).inflate(R.layout.addressdialog, null);
+                builder.setView(view);
+                LinearLayout addressdialog_linearlayout = (LinearLayout) view.findViewById(R.id.addressdialog_linearlayout);
+                final ScrollerNumberPicker provincePicker = (ScrollerNumberPicker) view.findViewById(R.id.province);
+                final ScrollerNumberPicker cityPicker = (ScrollerNumberPicker) view.findViewById(R.id.city);
+                final ScrollerNumberPicker counyPicker = (ScrollerNumberPicker) view.findViewById(R.id.couny);
+                final AlertDialog dialog = builder.show();
+
+                addressdialog_linearlayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+//                        textid.setText(provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
+//                        Log.i("kkkk",provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
+//                        dialog.dismiss();
+                        LogCp.i(LogCp.CP, TestActivity.class + "选择的区：" + provincePicker.getSelectedText() + ",," + provincePicker.getSelected());
+
+
+                    }
+                });
                 break;
 
 
