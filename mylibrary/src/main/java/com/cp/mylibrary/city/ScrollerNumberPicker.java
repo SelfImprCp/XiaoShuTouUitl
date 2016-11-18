@@ -27,6 +27,10 @@ import java.util.ArrayList;
  * 
  */
 public class ScrollerNumberPicker extends View {
+
+
+
+
 	/** 控件宽度 */
 	private float controlWidth;
 	/** 控件高度 */
