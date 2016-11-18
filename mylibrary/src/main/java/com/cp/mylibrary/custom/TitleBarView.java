@@ -34,7 +34,6 @@ public class TitleBarView extends RelativeLayout {
 
         initView(context);
 
-        //TODO 调整点击的范围 ，重新切一下图
 
 
 

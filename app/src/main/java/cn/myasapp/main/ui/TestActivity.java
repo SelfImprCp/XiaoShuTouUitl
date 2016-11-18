@@ -51,10 +51,8 @@ public class TestActivity extends BaseActivity {
     private TextView random_utils_test;
 
 
-
     @BindView(id = R.id.screen_utils_test, click = true)
     private TextView screen_utils_test;
-
 
 
     @BindView(id = R.id.cache_utils_test, click = true)
@@ -82,7 +80,6 @@ public class TestActivity extends BaseActivity {
     private TextView pullto_test;
 
 
-
     @BindView(id = R.id.dialog_test, click = true)
     private TextView dialog_test;
 
@@ -92,7 +89,6 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.pickview_test, click = true)
     private TextView pickview_test;
-
 
 
     @BindView(id = R.id.guestture_test, click = true)
@@ -107,11 +103,6 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.date_select_test, click = true)
     private TextView date_select_test;
-
-
-
-
-
 
 
     @Override
@@ -169,32 +160,30 @@ public class TestActivity extends BaseActivity {
 
                 break;
 
-             // 测试 RandomUtils
+            // 测试 RandomUtils
             case R.id.random_utils_test:
 
-                 TestUIhelper.showTestRandomUtils(this);
+                TestUIhelper.showTestRandomUtils(this);
                 break;
 
-           // 测试 screen
+            // 测试 screen
             case R.id.screen_utils_test:
                 TestUIhelper.showTestScreenUtils(this);
-                        break;
+                break;
 
 
-             // 测试异常保存
+            // 测试异常保存
             case R.id.cache_utils_test:
                 UserBean user = null;
                 user.getName();
-
 
 
                 break;
 
             case R.id.two_codes_test:
 
-                 TestUIhelper.showTwoCode(this);
+                TestUIhelper.showTwoCode(this);
                 break;
-
 
 
             case R.id.create_two_codes_test:
@@ -222,7 +211,6 @@ public class TestActivity extends BaseActivity {
                 break;
 
 
-
             case R.id.pullto_test:
 
                 TestUIhelper.showPullableListViewActivity(this);
@@ -232,7 +220,7 @@ public class TestActivity extends BaseActivity {
 
             case R.id.viewpage_test:
 
-             TestUIhelper.showTextViewPageFragment(this);
+                TestUIhelper.showTextViewPageFragment(this);
 
 //                MainFocusListRes res = new  MainFocusListRes();
 //
@@ -259,17 +247,16 @@ public class TestActivity extends BaseActivity {
                 break;
 
 
-
             case R.id.dialog_test:
 
-                TestUIhelper.   showDialogTestActivity(this);
+                TestUIhelper.showDialogTestActivity(this);
 
                 break;
 
 
             case R.id.url_test:
 
-                TestUIhelper.   showUrlTestActivity(this);
+                TestUIhelper.showUrlTestActivity(this);
 
                 break;
 
@@ -279,19 +266,16 @@ public class TestActivity extends BaseActivity {
                 break;
 
 
-
             case R.id.xrefreshview_scrollview_test:
 
-             TestUIhelper.showTestScrollViewRefreshActivity(this);
+                TestUIhelper.showTestScrollViewRefreshActivity(this);
                 break;
-
 
 
             case R.id.xrefreshview_receylie_test:
 
                 TestUIhelper.showXRefreshListViewActivity(this);
                 break;
-
 
 
             case R.id.guestture_test:
@@ -302,19 +286,18 @@ public class TestActivity extends BaseActivity {
                 break;
 
 
-
             case R.id.date_select_test:
-                  String initStartDateTime = "2013-09-03"; // 初始化开始时间
-                  String initEndDateTime = "2014-08-23"; // 初始化结束时间
+                String initStartDateTime = "2013-09-03"; // 初始化开始时间
+                String initEndDateTime = "2014-08-23"; // 初始化结束时间
                 final DateTimePickDialogUtil dateTimePicKDialog = new DateTimePickDialogUtil(
-                        TestActivity.this, initEndDateTime,"选择时间");
+                        TestActivity.this, initEndDateTime, "选择时间");
                 dateTimePicKDialog.dateTimePicKDialog(initStartDateTime, initEndDateTime, "确认", "取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                      String str  =   dateTimePicKDialog.getSelectDate();
+                        String str = dateTimePicKDialog.getSelectDate();
 
-                        LogCp.i(LogCp.CP,TestActivity.class + "选择的日期 " + str);
+                        LogCp.i(LogCp.CP, TestActivity.class + "选择的日期 " + str);
 
                     }
                 }, new DialogInterface.OnClickListener() {
@@ -328,18 +311,9 @@ public class TestActivity extends BaseActivity {
                 break;
 
 
-
-
-
-
-
-
         }
 
     }
-
-
-
 
 
 }
