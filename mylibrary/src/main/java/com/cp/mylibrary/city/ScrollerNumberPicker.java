@@ -508,7 +508,18 @@ public class ScrollerNumberPicker extends View {
 		}
 		return "";
 	}
-
+	/**
+	 * 获取返回的内容
+	 *
+	 * @return
+	 */
+//	public String getSelectedID() {
+//		for (ItemObject item : itemList) {
+//			if (item.isSelected())
+//				return item.;
+//		}
+//		return "";
+//	}
 	/**
 	 * 是否正在滑动
 	 * 
