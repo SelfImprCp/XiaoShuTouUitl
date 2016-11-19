@@ -140,7 +140,19 @@ public abstract class CommonAdapter<T> extends
 		if (mDatas != null && data != null && !data.isEmpty()) {
 			mDatas.addAll(data);
 		}
-		notifyDataSetChanged();
+
 	}
+
+	public void removeAllData( ) {
+		if (mDatas != null  ) {
+		 mDatas.clear();
+		}
+
+	}
+
+
+
+
+
 
 }
