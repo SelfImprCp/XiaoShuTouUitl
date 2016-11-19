@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cp.mylibrary.city.ScrollerNumberPicker;
+import com.cp.mylibrary.utils.AreaParserUitl;
 import com.cp.mylibrary.utils.DateTimePickDialogUtil;
 import com.cp.mylibrary.utils.LogCp;
 
@@ -110,6 +111,14 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.city_select_test, click = true)
     private TextView city_select_test;
+
+
+
+    @BindView(id = R.id.city_parse_area, click = true)
+    private TextView city_parse_area;
+
+
+
 
 
     @Override
@@ -336,13 +345,36 @@ public class TestActivity extends BaseActivity {
 //                        textid.setText(provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
 //                        Log.i("kkkk",provincePicker.getSelectedText()+cityPicker.getSelectedText()+counyPicker.getSelectedText());
 //                        dialog.dismiss();
-                        LogCp.i(LogCp.CP, TestActivity.class + "选择的区：" + provincePicker.getSelectedText() + ",," + provincePicker.getSelected());
 
+                        LogCp.i(LogCp.CP, TestActivity.class + "选择的省ID：" + ", 是执行这里了，," + provincePicker.getSelectedText());
+
+                        String str = provincePicker.getSelectedText();
+                        String provinceID = provincePicker.getSelectedProvinceID(str);
+
+
+                        String strCity = cityPicker.getSelectedText();
+                        String cityID = cityPicker.getSelectedCityID(provinceID,strCity);
+
+
+                        String strCounty = counyPicker.getSelectedText();
+                        String countyID = counyPicker.getSelectedCountyID(cityID,strCounty);
+
+                        LogCp.i(LogCp.CP, TestActivity.class + "选择的省ID：" + provinceID + ",,选择的市ID：" + cityID + ",,选择的区ID：" + countyID);
 
                     }
                 });
                 break;
 
+
+            case R.id.city_parse_area:
+
+                AreaParserUitl areaParserUitl = new AreaParserUitl();
+                areaParserUitl.openGson(TestActivity.this);
+
+
+
+
+                break;
 
         }
 

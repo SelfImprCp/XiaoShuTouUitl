@@ -55,7 +55,7 @@ public class CitycodeUtil {
 
 	/**
 	 * 获取单例
-	 * 
+	 *
 	 * @return
 	 */
 	public static CitycodeUtil getSingleton() {

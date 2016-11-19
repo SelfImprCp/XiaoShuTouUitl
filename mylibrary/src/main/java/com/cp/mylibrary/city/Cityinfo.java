@@ -1,7 +1,6 @@
 package com.cp.mylibrary.city;
 
 import java.io.Serializable;
-
 public class Cityinfo implements Serializable {
 
 	private String id;

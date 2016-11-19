@@ -177,6 +177,15 @@
                 android:text="  测试选择城市   " />
 
 
+
+
+            <TextView
+                android:id="@+id/city_parse_area"
+
+                style="@style/test_textview_style"
+                android:text="  解析一下gson   " />
+
+
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>
 

@@ -16,8 +16,11 @@ import android.view.View;
 
 
 import com.cp.mylibrary.R;
+import com.cp.mylibrary.utils.LogCp;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * 
@@ -80,6 +83,88 @@ public class ScrollerNumberPicker extends View {
 	
 	/** 正在修改数据，避免ConcurrentModificationException异常 */
 	private boolean isClearing = false;
+
+
+
+	private List<Cityinfo> province_list = new ArrayList<Cityinfo>();
+	private HashMap<String, List<Cityinfo>> city_map = new HashMap<String, List<Cityinfo>>();
+	private HashMap<String, List<Cityinfo>> couny_map = new HashMap<String, List<Cityinfo>>();
+
+
+
+
+	/**
+	 *  通过省名取得省id
+	 *
+	 * @return
+	 */
+	public String getSelectedProvinceID(String provinceStr) {
+
+		LogCp.i(LogCp.CP,ScrollerNumberPicker.class +
+				"来取的名： 外面 省" + provinceStr );
+		for (Cityinfo cityinfo : province_list) {
+
+
+			if (cityinfo.getCity_name().equals(provinceStr))
+				return cityinfo.getId();
+		}
+		return "";
+	}
+	/**
+	 *  通过市名名取得市id
+	 *
+	 * @return
+	 */
+	public String getSelectedCityID(String provinceID ,String cityStr) {
+
+		LogCp.i(LogCp.CP,ScrollerNumberPicker.class +
+				"来取的名： 外面 市" + cityStr +" city map " + city_map.size() );
+
+		// 通过省名取得这个省id下面所有的市
+
+		List<Cityinfo> cityList = city_map.get(provinceID);
+
+		LogCp.i(LogCp.CP,ScrollerNumberPicker.class +
+				"来取的名： 当前省下多少市" + cityList);
+		if (cityList!=null)
+		{
+			for (Cityinfo cityinfo : cityList) {
+
+
+				if (cityinfo.getCity_name().equals(cityStr))
+					return cityinfo.getId();
+			}
+		}
+
+
+		return "";
+	}
+
+	/**
+	 *  通过区名名取得区id
+	 *
+	 * @return
+	 */
+	public String getSelectedCountyID(String cityID,String countyStr) {
+
+		LogCp.i(LogCp.CP,ScrollerNumberPicker.class +
+				"来取的名： 外面 区" + countyStr );
+		List<Cityinfo> cityList = couny_map.get(cityID);
+
+ if (cityList!=null)
+ {for (Cityinfo cityinfo : cityList) {
+
+
+	 if (cityinfo.getCity_name().equals(countyStr))
+		 return cityinfo.getId();
+ }
+
+ }
+
+		return "";
+	}
+
+
 
 	public ScrollerNumberPicker(Context context, AttributeSet attrs,
 			int defStyle) {
@@ -479,11 +564,18 @@ public class ScrollerNumberPicker extends View {
 
 	/**
 	 * 设置数据
-	 * 
+	 * 	private List<Cityinfo> province_list = new ArrayList<Cityinfo>();
+	 private HashMap<String, List<Cityinfo>> city_map = new HashMap<String, List<Cityinfo>>();
+	 private HashMap<String, List<Cityinfo>> couny_map = new HashMap<String, List<Cityinfo>>();
+
 	 * @param data
 	 */
-	public void setData(ArrayList<String> data) {
+	public void setData(ArrayList<String> data,List<Cityinfo> province_list,HashMap<String, List<Cityinfo>> city_map,HashMap<String, List<Cityinfo>> couny_map) {
+
 		this.dataList = data;
+		this.province_list = province_list;
+		this.city_map = city_map;
+		this.couny_map = couny_map;
 		initData();
 	}
 
