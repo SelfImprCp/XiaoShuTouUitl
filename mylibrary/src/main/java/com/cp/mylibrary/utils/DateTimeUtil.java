@@ -519,7 +519,7 @@ public class DateTimeUtil {
         if (type.equals("年")) {
             calendar.add(Calendar.YEAR, sum);
         } else if (type.equals("月")) {
-            calendar.add(Calendar.MONTH, sum);
+            calendar.add(Calendar.MONTH, sum+1);
         } else if (type.equals("日")) {
             calendar.add(Calendar.DATE, sum);
         }
