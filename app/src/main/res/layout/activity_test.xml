@@ -186,6 +186,14 @@
                 android:text="  解析一下gson   " />
 
 
+
+            <TextView
+                android:id="@+id/email_check_text"
+
+                style="@style/test_textview_style"
+                android:text="  检查邮箱   " />
+
+
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>
 

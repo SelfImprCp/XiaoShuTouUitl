@@ -14,6 +14,7 @@ import com.cp.mylibrary.city.ScrollerNumberPicker;
 import com.cp.mylibrary.utils.AreaParserUitl;
 import com.cp.mylibrary.utils.DateTimePickDialogUtil;
 import com.cp.mylibrary.utils.LogCp;
+import com.cp.mylibrary.utils.StringUtils;
 
 
 import org.kymjs.kjframe.ui.BindView;
@@ -116,6 +117,9 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.city_parse_area, click = true)
     private TextView city_parse_area;
+
+    @BindView(id = R.id.email_check_text, click = true)
+    private TextView email_check_text;
 
 
 
@@ -375,6 +379,22 @@ public class TestActivity extends BaseActivity {
 
 
                 break;
+
+
+
+
+
+
+
+            case R.id.email_check_text:
+
+
+                 String strEmail = "321@qq.com";
+          LogCp.i(LogCp.CP,TestActivity.class + "是不是一个emaial :"+StringUtils.isEmail(strEmail) );
+
+
+                break;
+
 
         }
 
