@@ -507,6 +507,28 @@ public class DateTimeUtil {
     }
 
     /**
+     * 得到一个时间延后或前移几天的时间,nowdate为时间,delay为前移或后延的天数
+     */
+    public static String getNextDay(String nowdate, int sum, String type) {
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String mdate = "";
+        Date d = strToDate(nowdate);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(d);
+        if (type.equals("年")) {
+            calendar.add(Calendar.YEAR, sum);
+        } else if (type.equals("月")) {
+            calendar.add(Calendar.MONTH, sum);
+        } else if (type.equals("日")) {
+            calendar.add(Calendar.DATE, sum);
+        }
+        Date ooDate = calendar.getTime();
+        return format.format(ooDate);
+    }
+
+
+    /**
      * 判断是否润年    *    * @param ddate    * @return
      */
     public static boolean isLeapYear(String ddate) {       /**      * 详细设计： 1.被400整除是闰年，否则： 2.不能被4整除则不是闰年 3.能被4整除同时不能被100整除则是闰年      * 3.能被4整除同时能被100整除则不是闰年      */
