@@ -43,9 +43,6 @@ public abstract class BaseViewPagerFragment extends MyBaseFragment {
         mErrorLayout = (EmptyLayout) view.findViewById(R.id.error_layout);
 
 
-
-
-
         mTabsAdapter = new ViewPageFragmentAdapter(getChildFragmentManager(),
                 mTabStrip, mViewPager);
 
