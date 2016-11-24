@@ -25,6 +25,7 @@ public class TitleBarView extends RelativeLayout {
     private TextView titleBarTitle, titlebar_tv_menu2,titlebar_text_title_two_1,titlebar_text_title_two_2,titlebar_tv_menu_text;
     private ImageView titlebar_img_back;
     private ImageView titlebar_img_menu;
+    private  View titlebar_tv_fengexian;
 
 
 
@@ -66,6 +67,8 @@ public class TitleBarView extends RelativeLayout {
         titlebar_tv_menu_text = (TextView)view.findViewById(R.id.titlebar_tv_menu_text);
 
 
+        titlebar_tv_fengexian = (View)view.findViewById(R.id.titlebar_tv_fengexian);
+
 
 
         titlebar_img_menu = (ImageView) view.findViewById(R.id.titlebar_img_menu);
@@ -75,6 +78,11 @@ public class TitleBarView extends RelativeLayout {
     }
 
 
+
+     public  void setFenGeXianIsShow(int visible)
+     {
+         titlebar_tv_fengexian.setVisibility(visible);
+     }
 
     public void setTitleBarImageMenuText(String str,OnClickListener onClickListener) {
         if (!StringUtils.isEmpty(str))

@@ -32,6 +32,7 @@
 
         <LinearLayout
             android:id="@+id/ly_share_qq"
+            android:visibility="gone"
             style="@style/dialog_content_share_ll"
              >
 

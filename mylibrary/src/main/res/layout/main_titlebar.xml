@@ -129,6 +129,7 @@
         android:visibility="gone" />
 
     <View
+        android:id="@+id/titlebar_tv_fengexian"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_1"
         android:layout_alignParentBottom="true"
