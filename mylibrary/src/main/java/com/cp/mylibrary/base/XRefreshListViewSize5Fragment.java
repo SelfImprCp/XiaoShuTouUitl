@@ -165,6 +165,7 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
         // 取新的数据
         //   requestData();
         // }
+        LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + "  设置缓存的ke   " + myCachePath);
 
 
         String cacheStr = (String) MyCache.getMyCache(getActivity()).readObject(myCachePath + mCurrentPage);
