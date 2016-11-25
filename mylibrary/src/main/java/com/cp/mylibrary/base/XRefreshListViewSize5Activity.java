@@ -16,6 +16,7 @@ import com.cp.mylibrary.app.Config;
 import com.cp.mylibrary.bean.MyEntity;
 import com.cp.mylibrary.custom.EmptyLayout;
 import com.cp.mylibrary.utils.LogCp;
+import com.cp.mylibrary.utils.MyCache;
 import com.cp.mylibrary.utils.NetWorkUtil;
 
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class XRefreshListViewSize5Activity<T extends MyEntity> extends MyBaseAct
     public static final int STATE_PRESSNONE = 4;// 正在下拉但还没有到刷新的状态
     public static int mState = STATE_NONE;
 
+    public   String myCachePath = "";
 
     //解析数据
     private ParserTask mParserTask;
@@ -288,6 +290,13 @@ public class XRefreshListViewSize5Activity<T extends MyEntity> extends MyBaseAct
 
 
 
+    public  void setCachePath(String cachePath)
+    {
+
+        myCachePath = cachePath;
+
+    }
+
     /**
      * 所有的子类的请求响应
      */
@@ -300,6 +309,10 @@ public class XRefreshListViewSize5Activity<T extends MyEntity> extends MyBaseAct
             LogCp.i(LogCp.CP, XRefreshListViewSize5Activity.class + "请求来的数据 " + res);
 
             executeParserTask(res);
+
+            // 保存到缓存上中
+            MyCache.getMyCache(mContext).saveObject(myCachePath, res);
+
             // refreshLoadMoreFinish();
         }
 
