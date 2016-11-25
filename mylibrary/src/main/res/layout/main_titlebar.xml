@@ -65,6 +65,7 @@
         style="@style/titlebar_img"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:paddingRight="@dimen/space_15"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/space_5"
@@ -131,7 +132,7 @@
     <View
         android:id="@+id/titlebar_tv_fengexian"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/space_1"
+        android:layout_height="1px"
         android:layout_alignParentBottom="true"
         android:background="#e1e1e1"></View>
 
