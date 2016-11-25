@@ -172,7 +172,12 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
 
 
         if (!StringUtils.isEmpty(cacheStr)) {
-            parseList(cacheStr);
+
+
+//            parseList(cacheStr);
+            executeParserTask(cacheStr);
+
+
         } else {
             if (NetWorkUtil.hasInternetConnected(getActivity())) {
 
