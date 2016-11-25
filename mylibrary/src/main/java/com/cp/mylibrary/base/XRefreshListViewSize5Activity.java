@@ -283,6 +283,8 @@ public class XRefreshListViewSize5Activity<T extends MyEntity> extends MyBaseAct
         if (mSwipeRefreshLayout != null) {
             mSwipeRefreshLayout.setRefreshing(false);
             mSwipeRefreshLayout.setEnabled(true);
+
+
         }
     }
 
