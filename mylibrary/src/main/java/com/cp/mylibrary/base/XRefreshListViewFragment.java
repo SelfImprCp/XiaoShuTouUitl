@@ -224,6 +224,8 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
      */
 
 
+
+
      public  void setCachePath(String cachePath)
      {
 
