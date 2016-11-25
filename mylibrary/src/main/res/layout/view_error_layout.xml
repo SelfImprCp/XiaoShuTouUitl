@@ -40,7 +40,7 @@
 
 
                 android:text="@string/error_view_click_to_refresh"
-                android:textColor="@color/black_color_30"
+                android:textColor="#00b38a"
                 android:textSize="@dimen/text_size_16" />
 
 
