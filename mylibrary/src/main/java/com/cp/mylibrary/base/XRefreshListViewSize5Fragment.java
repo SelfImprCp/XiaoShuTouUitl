@@ -240,8 +240,6 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
             LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + "请求来的数据 " + res);
 
             executeParserTask(res);
-            // 保存到缓存上中
-            MyCache.getMyCache(mContext).saveObject(myCachePath, res);
 
 //            if (mCurrentPage == 0 && needAutoRefresh()) {
 //                AppContext.putToLastRefreshTime(getCacheKey(),
@@ -338,7 +336,14 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
         @Override
         protected String doInBackground(Void... params) {
             try {
+
+
+                // 保存到缓存上中
+                MyCache.getMyCache(mContext).saveObject(myCachePath, reponseData);
+
+
                 mData = parseList(reponseData);
+
                 LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + "解析 出来的数据 的，值 ，，"
                         + mData);
 
