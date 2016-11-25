@@ -19,6 +19,7 @@ import com.cp.mylibrary.custom.EmptyLayout;
 import com.cp.mylibrary.utils.LogCp;
 import com.cp.mylibrary.utils.MyCache;
 import com.cp.mylibrary.utils.NetWorkUtil;
+import com.cp.mylibrary.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +38,7 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
     public static final int STATE_NOMORE = 3;
     public static final int STATE_PRESSNONE = 4;// 正在下拉但还没有到刷新的状态
     public static int mState = STATE_NONE;
-    public   String myCachePath = "";
+    public String myCachePath = "";
 
 
     //解析数据
@@ -162,20 +163,27 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
 //            readCacheData(key);
 //        } else {
         // 取新的数据
-     //   requestData();
+        //   requestData();
         // }
 
 
-        if (NetWorkUtil.hasInternetConnected(getActivity()))
-        {
-            requestData();
-        }else
-        {
-            mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+        String cacheStr = (String) MyCache.getMyCache(getActivity()).readObject(myCachePath + mCurrentPage);
+        LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + " 缓存中取出，  列表 数据  " + cacheStr);
+
+
+        if (!StringUtils.isEmpty(cacheStr)) {
+            parseList(cacheStr);
+        } else {
+            if (NetWorkUtil.hasInternetConnected(getActivity())) {
+
+                requestData();
+
+            } else {
+                mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+
+            }
 
         }
-
-
 
     }
 
@@ -217,11 +225,11 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
     }
 
     /**
-     *  设置缓存路径
+     * 设置缓存路径
+     *
      * @param cachePath
      */
-    public  void setCachePath(String cachePath)
-    {
+    public void setCachePath(String cachePath) {
 
         myCachePath = cachePath;
 
@@ -261,8 +269,7 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
         @Override
         public void dataFailuer(int errorNo, String strMsg) {
 
-            LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + "请求列表数据 的时候，出异常了 ,代码：" + errorNo + "， 描述："  + strMsg);
-
+            LogCp.i(LogCp.CP, XRefreshListViewSize5Fragment.class + "请求列表数据 的时候，出异常了 ,代码：" + errorNo + "， 描述：" + strMsg);
 
 
         }
@@ -339,7 +346,7 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
 
 
                 // 保存到缓存上中
-                MyCache.getMyCache(mContext).saveObject(myCachePath, reponseData);
+                MyCache.getMyCache(mContext).saveObject(myCachePath + mCurrentPage, reponseData);
 
 
                 mData = parseList(reponseData);
@@ -378,7 +385,6 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
         if (data == null) {
             data = new ArrayList<T>();
         }
-
 
 
         mErrorLayout.setErrorType(EmptyLayout.HIDE_LAYOUT);
@@ -425,7 +431,6 @@ public class XRefreshListViewSize5Fragment<T extends MyEntity> extends MyBaseFra
     protected List<T> parseList(String is) {
         return null;
     }
-
 
 
     /**
