@@ -223,6 +223,7 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
      * 所有的子类的请求响应
      */
 
+
      public  void setCachePath(String cachePath)
      {
 
