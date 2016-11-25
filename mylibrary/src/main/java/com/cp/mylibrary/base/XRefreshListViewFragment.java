@@ -20,6 +20,7 @@ import com.cp.mylibrary.custom.EmptyLayout;
 import com.cp.mylibrary.utils.LogCp;
 import com.cp.mylibrary.utils.MyCache;
 import com.cp.mylibrary.utils.NetWorkUtil;
+import com.cp.mylibrary.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -167,15 +168,42 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
      //   requestData();
         // }
 
+        LogCp.i(LogCp.CP, XRefreshListViewFragment.class + "  设置缓存的ke   " + myCachePath);
 
-        if (NetWorkUtil.hasInternetConnected(getActivity()))
-        {
-            requestData();
-        }else
-        {
-            mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+
+        String cacheStr = (String) MyCache.getMyCache(getActivity()).readObject(myCachePath + mCurrentPage);
+        LogCp.i(LogCp.CP, XRefreshListViewFragment.class + " 缓存中取出，  列表 数据  " + cacheStr);
+
+//
+//        if (NetWorkUtil.hasInternetConnected(getActivity()))
+//        {
+//            requestData();
+//        }else
+//        {
+//            mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+//
+//        }
+
+
+        if (!StringUtils.isEmpty(cacheStr)) {
+
+
+//            parseList(cacheStr);
+            executeParserTask(cacheStr);
+
+
+        } else {
+            if (NetWorkUtil.hasInternetConnected(getActivity())) {
+
+                requestData();
+
+            } else {
+                mErrorLayout.setErrorType(EmptyLayout.NETWORK_ERROR);
+
+            }
 
         }
+
 
 
 
@@ -241,10 +269,10 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
             LogCp.i(LogCp.CP, XRefreshListViewFragment.class + "请求来的数据 " + res);
 
             executeParserTask(res);
-
-     // 保存到缓存上中
-            MyCache.getMyCache(mContext).saveObject(myCachePath, res);
-
+//
+//     // 保存到缓存上中
+//            MyCache.getMyCache(mContext).saveObject(myCachePath, res);
+//
 
 
 //            if (mCurrentPage == 0 && needAutoRefresh()) {
@@ -342,6 +370,12 @@ public class XRefreshListViewFragment<T extends MyEntity> extends MyBaseFragment
         @Override
         protected String doInBackground(Void... params) {
             try {
+
+
+                // 保存到缓存上中
+                MyCache.getMyCache(mContext).saveObject(myCachePath + mCurrentPage, reponseData);
+
+
                 mData = parseList(reponseData);
                 LogCp.i(LogCp.CP, XRefreshListViewFragment.class + "解析 出来的数据 的，值 ，，"
                         + mData);
