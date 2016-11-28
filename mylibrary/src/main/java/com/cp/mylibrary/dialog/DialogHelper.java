@@ -7,9 +7,11 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cp.mylibrary.R;
@@ -244,6 +246,12 @@ public class DialogHelper {
         // 实例化对话框布局
         View dialogLayout = LayoutInflater.from(context).inflate(
                 R.layout.base_tishi_dialog, null);
+
+
+
+        cd.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+
         // 设置标题
         TextView title_tv = (TextView) dialogLayout
                 .findViewById(R.id.base_tishi_dialog_title);

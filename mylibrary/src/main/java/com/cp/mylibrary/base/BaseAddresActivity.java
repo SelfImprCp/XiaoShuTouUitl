@@ -120,8 +120,6 @@ public class BaseAddresActivity extends MyBaseActivity {
                 + areasList.size());
 
 
-
-
         // 所有省的名字
         mProvinceDatas = new String[provincesList.size()];
 
@@ -197,7 +195,7 @@ public class BaseAddresActivity extends MyBaseActivity {
         //时间选择器
         pvTime = new TimePickerView(this, TimePickerView.Type.YEAR_MONTH_DAY);
         //控制时间范围
-       Calendar calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         pvTime.setRange(calendar.get(Calendar.YEAR) - 2000, calendar.get(Calendar.YEAR));//要在setTime 之前才有效果哦
         pvTime.setTime(new Date());
         pvTime.setCyclic(false);
@@ -235,7 +233,7 @@ public class BaseAddresActivity extends MyBaseActivity {
 //                );
 
 
-                if (areaBean.getId() ==cityBean.getPid()) {
+                if (areaBean.getId() == cityBean.getPid()) {
 
 
                     ProvinceBean proTwo = new ProvinceBean(cityBean.getId(), cityBean.getRname());
@@ -312,14 +310,6 @@ public class BaseAddresActivity extends MyBaseActivity {
 //        });
 //
 //    }
-
-
-
-
-
-
-
-
 
 
 }

@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class MyCache {
 
 	// wifi缓存时间为5分钟
-	private static int wifi_cache_time = 1 * 60 * 1;
+	private static int wifi_cache_time = 5 * 60 * 1;
 	// 其他网络环境为1小时
 	private static int other_cache_time = 60 * 60 * 1;
 
