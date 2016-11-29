@@ -37,7 +37,7 @@ public class CycleViewPager extends Fragment implements OnPageChangeListener {
 	private BaseViewPager parentViewPager;
 	private ViewPagerAdapter adapter;
 	private CycleViewPagerHandler handler;
-	private int time = 7000; // 默认轮播时间
+	private int time = 5000; // 默认轮播时间
 	private int currentPosition = 0; // 轮播当前位置
 	private boolean isScrolling = false; // 滚动框是否滚动着
 	private boolean isCycle = false; // 是否循环
