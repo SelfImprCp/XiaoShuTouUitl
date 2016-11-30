@@ -110,7 +110,7 @@
             android:gravity="center"
 
             android:text="确定"
-            android:textColor="#4ba6ee" />
+            android:textColor="@color/base_color"/>
     </LinearLayout>
 
 </LinearLayout>
