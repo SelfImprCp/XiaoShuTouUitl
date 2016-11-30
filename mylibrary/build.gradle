@@ -29,7 +29,22 @@ repositories {
 }
 
 
-
+//noinspection all
+task copyNativeLibs(type: Copy) {
+    // third party lib so
+    from(new File(projectDir, 'libs')) { include 'armeabi.so','armeabi-v7a.so' }
+    into new File(buildDir, 'native-libs')
+}
+tasks.withType(JavaCompile) {
+    compileTask ->
+        //noinspection all
+        compileTask.dependsOn copyNativeLibs
+}
+//noinspection all
+tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
+    pkgTask ->
+        new HashSet().add(new File(buildDir, 'native-libs'))
+}
 
 
 
