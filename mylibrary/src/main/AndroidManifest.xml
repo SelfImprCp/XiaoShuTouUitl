@@ -110,7 +110,7 @@
             android:value="8fb2de799bde4c99ab0896068d4db715"></meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="${UMENG_CHANNEL_VALUE}" />
+            android:value="Umeng"></meta-data>
 
 
     </application>
