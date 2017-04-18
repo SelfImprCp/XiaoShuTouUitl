@@ -4,10 +4,13 @@ import android.os.AsyncTask;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.cp.mylibrary.R;
 import com.cp.mylibrary.api.MyResponseHandler;
+import com.cp.mylibrary.app.Config;
 import com.cp.mylibrary.bean.MyEntity;
+import com.cp.mylibrary.custom.EmptyLayout;
 import com.cp.mylibrary.pullto.XRefreshView;
 import com.cp.mylibrary.pullto.recyclerview.BaseRecyclerAdapter;
 import com.cp.mylibrary.utils.LogCp;
@@ -35,8 +38,8 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
     //当前页数
     protected int mCurrentPage = 0;
 
-    public int PAGE_SIZE = 10;
-
+//    public int PAGE_SIZE = 10;
+//
 
      private BaseRecyclerAdapter mAdapter;
 
@@ -66,8 +69,15 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view_xrefreshview_rv);
         xRefreshView = (XRefreshView) findViewById(R.id.recycler_xrefreshview);
+
         xRefreshView.setPullLoadEnable(true);
         mRecyclerView.setHasFixedSize(true);
+
+
+
+
+
+
 
         mLayoutManager = new GridLayoutManager(this, 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -259,7 +269,7 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
 
 
     protected int getPageSize() {
-        return PAGE_SIZE;
+        return Config.PAGE_SIXE;
     }
 
     protected List<T> parseList(String is) {
