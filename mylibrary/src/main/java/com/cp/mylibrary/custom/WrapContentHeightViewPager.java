@@ -21,7 +21,11 @@ import android.view.View;
  *
  */
 
-public class WrapContentHeightViewPager extends ViewPager {
+    public class WrapContentHeightViewPager extends ViewPager {
+
+
+
+
     public WrapContentHeightViewPager(Context context) {
         super(context);
     }
