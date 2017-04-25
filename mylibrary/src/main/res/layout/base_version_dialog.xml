@@ -6,7 +6,7 @@
     android:layout_gravity="center"
 
 
-    android:background="@drawable/login_layout_btn_main_color"
+    android:background="@color/base_color"
     android:orientation="vertical">
 
 
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:background="@drawable/login_layout_btn_white_bottom"
+        android:background="@color/white_cp_util"
         android:orientation="vertical">
 
 

@@ -25,7 +25,6 @@ import android.view.View;
 
 
 
-
     public WrapContentHeightViewPager(Context context) {
         super(context);
     }
