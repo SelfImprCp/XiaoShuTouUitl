@@ -17,15 +17,11 @@
         android:layout_marginRight="100dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:visibility="gone" />
+
 
         <TextView
             android:id="@+id/base_version_dialog_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/space_10"
             android:layout_marginLeft="@dimen/space_8"
@@ -33,7 +29,7 @@
 
             android:text="标题:"
             android:textColor="@color/white_cp_util"
-            android:textSize="@dimen/text_size_18" />
+            android:textSize="@dimen/text_size_16" />
 
     </LinearLayout>
 
