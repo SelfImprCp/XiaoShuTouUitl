@@ -13,6 +13,7 @@ import com.cp.mylibrary.bean.MyEntity;
 import com.cp.mylibrary.custom.EmptyLayout;
 import com.cp.mylibrary.pullto.XRefreshView;
 import com.cp.mylibrary.pullto.recyclerview.BaseRecyclerAdapter;
+import com.cp.mylibrary.res.Response;
 import com.cp.mylibrary.utils.LogCp;
 import com.cp.mylibrary.utils.NetWorkUtil;
 
@@ -227,8 +228,10 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
         private final String reponseData;
         private boolean parserError;
 
-        private List<T>
-                currentList = new ArrayList<T>();
+         private Response response;
+
+//        private List<T>
+//                currentList = new ArrayList<T>();
 
         public ParserTask(String data) {
             this.reponseData = data;
@@ -237,9 +240,9 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
         @Override
         protected String doInBackground(Void... params) {
             try {
-                currentList = parseList(reponseData);
+                response = parseList(reponseData);
                 LogCp.i(LogCp.CP, XRefreshRecyclerViewActivity.class + "解析 出来的数据 的，值 ，，"
-                        + currentList);
+                        + response);
 
 
             } catch (Exception e) {
@@ -261,7 +264,7 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
 
             } else {
 
-                executeOnLoadDataSuccess(currentList);
+                executeOnLoadDataSuccess(response);
 
             }
         }
@@ -272,21 +275,21 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
         return Config.PAGE_SIXE;
     }
 
-    protected List<T> parseList(String is) {
+    protected Response parseList(String is) {
         return null;
     }
 
     /**
      * 解析出来的数据
-     * @param data
+     * @param
      */
-    protected void executeOnLoadDataSuccess(List<T> data) {
+    protected void executeOnLoadDataSuccess(Response response) {
 
 
 
 
-        mAdapter.addData(data);
-
+//        mAdapter.addData(data);
+//
 
     }
 
