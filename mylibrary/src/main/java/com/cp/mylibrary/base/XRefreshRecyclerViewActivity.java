@@ -276,6 +276,8 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
     }
 
     protected Response parseList(String is) {
+
+
         return null;
     }
 
