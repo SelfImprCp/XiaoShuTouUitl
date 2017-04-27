@@ -42,7 +42,7 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
 //    public int PAGE_SIZE = 10;
 //
 
-     private BaseRecyclerAdapter mAdapter;
+     public BaseRecyclerAdapter mAdapter;
 
     //数据源
     public List<T> mData = new ArrayList<T>();
