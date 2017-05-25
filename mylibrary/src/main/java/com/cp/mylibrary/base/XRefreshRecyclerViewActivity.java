@@ -223,6 +223,8 @@ public class XRefreshRecyclerViewActivity<T extends MyEntity>  extends  MyBaseAc
             mParserTask = null;
         }
     }
+
+
     class ParserTask extends AsyncTask<Void, Void, String> {
 
         private final String reponseData;
