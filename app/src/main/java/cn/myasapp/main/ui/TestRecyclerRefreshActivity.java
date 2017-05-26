@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import com.cp.mylibrary.base.XRefreshRecyclerViewActivity;
 import com.cp.mylibrary.custom.TitleBarView;
 import com.cp.mylibrary.interf.OnItemClickListener;
+import com.cp.mylibrary.res.Response;
 import com.cp.mylibrary.utils.GsonUtil;
 import com.cp.mylibrary.utils.ShowToastUtil;
 
@@ -77,12 +78,20 @@ public class TestRecyclerRefreshActivity extends XRefreshRecyclerViewActivity {
     }
 
     @Override
-    protected List parseList(String is) {
-
+    protected Response parseList(String is) {
         MainFocusListRes res = GsonUtil.jsonStrToBean(is, MainFocusListRes.class);
 
-        return res.getResult();
+       return res;
     }
+
+
+    //    @Override
+//    protected List parseList(String is) {
+//
+//        MainFocusListRes res = GsonUtil.jsonStrToBean(is, MainFocusListRes.class);
+//
+//        return res.getResult();
+//    }
 
 
     /**
