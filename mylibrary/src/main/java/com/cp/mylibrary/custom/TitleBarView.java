@@ -77,7 +77,7 @@ public class TitleBarView extends RelativeLayout {
     }
 
 
-    public void setBackgroundColor(int color) {
+    public void setBgColor(int color) {
         titlebar.setBackgroundColor(color);
     }
 
