@@ -22,20 +22,17 @@ import org.w3c.dom.Text;
 
 public class TitleBarView extends RelativeLayout {
 
-    private TextView titleBarTitle, titlebar_tv_menu2,titlebar_text_title_two_1,titlebar_text_title_two_2,titlebar_tv_menu_text;
+    private TextView titleBarTitle, titlebar_tv_menu2, titlebar_text_title_two_1, titlebar_text_title_two_2, titlebar_tv_menu_text;
     private ImageView titlebar_img_back;
     private ImageView titlebar_img_menu;
-    private  View titlebar_tv_fengexian;
-
-
+    private View titlebar_tv_fengexian;
+    private RelativeLayout titlebar;
 
 
     public TitleBarView(Context context) {
         super(context);
 
         initView(context);
-
-
 
 
     }
@@ -57,18 +54,20 @@ public class TitleBarView extends RelativeLayout {
     }
 
     private void initTitleView(View view) {
+        titlebar = (RelativeLayout) view.findViewById(R.id.titlebar)
+
+        ;
         titleBarTitle = (TextView) view.findViewById(R.id.titlebar_text_title);
 
         titlebar_tv_menu2 = (TextView) view.findViewById(R.id.titlebar_tv_menu2);
 
-        titlebar_text_title_two_1 = (TextView)view.findViewById(R.id.titlebar_text_title_two_1);
-        titlebar_text_title_two_2 = (TextView)view.findViewById(R.id.titlebar_text_title_two_2);
+        titlebar_text_title_two_1 = (TextView) view.findViewById(R.id.titlebar_text_title_two_1);
+        titlebar_text_title_two_2 = (TextView) view.findViewById(R.id.titlebar_text_title_two_2);
 
-        titlebar_tv_menu_text = (TextView)view.findViewById(R.id.titlebar_tv_menu_text);
+        titlebar_tv_menu_text = (TextView) view.findViewById(R.id.titlebar_tv_menu_text);
 
 
-        titlebar_tv_fengexian = (View)view.findViewById(R.id.titlebar_tv_fengexian);
-
+        titlebar_tv_fengexian = (View) view.findViewById(R.id.titlebar_tv_fengexian);
 
 
         titlebar_img_menu = (ImageView) view.findViewById(R.id.titlebar_img_menu);
@@ -78,13 +77,15 @@ public class TitleBarView extends RelativeLayout {
     }
 
 
+    public void setBackgroundColor(int color) {
+        titlebar.setBackgroundColor(color);
+    }
 
-     public  void setFenGeXianIsShow(int visible)
-     {
-         titlebar_tv_fengexian.setVisibility(visible);
-     }
+    public void setFenGeXianIsShow(int visible) {
+        titlebar_tv_fengexian.setVisibility(visible);
+    }
 
-    public void setTitleBarImageMenuText(String str,OnClickListener onClickListener) {
+    public void setTitleBarImageMenuText(String str, OnClickListener onClickListener) {
         if (!StringUtils.isEmpty(str))
 
         {
@@ -129,6 +130,16 @@ public class TitleBarView extends RelativeLayout {
 
     }
 
+
+    /**
+     * @param
+     */
+    public void setTitleStrColor(int color) {
+
+        titleBarTitle.setTextColor(color);
+    }
+
+
     /**
      * @param str
      */
@@ -156,13 +167,11 @@ public class TitleBarView extends RelativeLayout {
     }
 
     /**
-     *
      * @return
      */
-     public ImageView getTitleBarMenuImg()
-     {
-          return  titlebar_img_menu;
-     }
+    public ImageView getTitleBarMenuImg() {
+        return titlebar_img_menu;
+    }
 
 
     /**
@@ -175,6 +184,7 @@ public class TitleBarView extends RelativeLayout {
 
     /**
      * 给返回设置监听
+     *
      * @param onClickListener
      */
     public void setTitleBackClick(OnClickListener onClickListener) {
@@ -184,7 +194,6 @@ public class TitleBarView extends RelativeLayout {
 
 
     /**
-     *
      * @param
      */
     public void setTitleBackImg(int imgId) {
@@ -193,12 +202,13 @@ public class TitleBarView extends RelativeLayout {
     }
 
     /**
-     *  设置返回 直接关掉当前使...活动
+     * 设置返回 直接关掉当前使...活动
+     *
      * @param activity
      */
     public void setTitleBackFinshActivity(final Activity activity) {
 
-        titlebar_img_back.setOnClickListener(new OnClickListener(){
+        titlebar_img_back.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 activity.finish();
@@ -207,20 +217,17 @@ public class TitleBarView extends RelativeLayout {
     }
 
 
-
     /**
      *
      */
-    public void  setTitleBackIsShow(int show)
-    {
-        switch (show)
-        {
-            case  View.VISIBLE:
+    public void setTitleBackIsShow(int show) {
+        switch (show) {
+            case View.VISIBLE:
                 titlebar_img_back.setVisibility(View.VISIBLE);
                 break;
 
 
-            case  View.GONE:
+            case View.GONE:
                 titlebar_img_back.setVisibility(View.GONE);
                 break;
 
