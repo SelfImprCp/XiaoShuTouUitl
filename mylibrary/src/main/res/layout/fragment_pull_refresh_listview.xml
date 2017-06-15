@@ -6,6 +6,22 @@
 
     <!-- google 官方下拉刷新 -->
 
+
+    <View
+
+        style="@style/feng_ge_xian"></View>
+
+
+    <View
+
+        style="@style/feng_ge_xian_20"
+
+        android:background="@color/bg_color_f7f7f8"></View>
+
+
+    <View style="@style/feng_ge_xian"
+
+        ></View>
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swiperefreshlayout"
         android:layout_width="fill_parent"

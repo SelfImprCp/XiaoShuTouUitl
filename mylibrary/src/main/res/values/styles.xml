@@ -212,6 +212,20 @@
         <item name="android:windowAnimationStyle">@style/dialog_animation</item>
     </style>
 
+    <style name="feng_ge_xian">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/xiaoshutou_fegese_ceced1</item>
+
+    </style>
+
+
+    <style name="feng_ge_xian_20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20px</item>
+        <item name="android:background">@color/bg_color_f7f7f8</item>
+
+    </style>
 
 
 </resources>

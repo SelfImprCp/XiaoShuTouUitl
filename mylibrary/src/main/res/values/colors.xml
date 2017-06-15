@@ -37,5 +37,7 @@
     <color name="text_dark">#af000000</color>
 
     <color name="bg_touch">@color/lightest_gray</color>
+    <color name="xiaoshutou_fegese_ceced1">#CECED1</color>
+    <color name="bg_color_f7f7f8">#F7F7F8</color>
 
 </resources>
