@@ -5,6 +5,12 @@
     android:orientation="vertical">
 
 
+
+     <com.cp.mylibrary.custom.TitleBarView
+         android:id="@+id/text_title"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"></com.cp.mylibrary.custom.TitleBarView>
+
     <com.cp.mylibrary.custom.CPScrollView
         android:layout_width="match_parent"
 
@@ -193,6 +199,11 @@
                 style="@style/test_textview_style"
                 android:text="  检查邮箱   " />
 
+            <TextView
+                android:id="@+id/nest_scrollview_viewpager"
+
+                style="@style/test_textview_style"
+                android:text=" NestedScrollView嵌套ViewPager  " />
 
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>

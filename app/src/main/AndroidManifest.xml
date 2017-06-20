@@ -109,6 +109,10 @@
             android:label=" ImageLoad "
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.ResumeActivity"
+            android:label=" ImageLoad "
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".ui.TestBanner"

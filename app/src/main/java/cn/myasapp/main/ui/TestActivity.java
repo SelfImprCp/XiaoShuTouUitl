@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.cp.mylibrary.city.ScrollerNumberPicker;
+import com.cp.mylibrary.custom.TitleBarView;
 import com.cp.mylibrary.utils.AreaParserUitl;
 import com.cp.mylibrary.utils.DateTimePickDialogUtil;
 import com.cp.mylibrary.utils.LogCp;
@@ -35,6 +36,10 @@ public class TestActivity extends BaseActivity {
 
     @BindView(id = R.id.test_app_utils, click = true)
     private TextView test_app_utils;
+
+
+    @BindView(id = R.id.text_title, click = true)
+    private TitleBarView text_title;
 
 
     @BindView(id = R.id.test_date_time_util, click = true)
@@ -114,7 +119,6 @@ public class TestActivity extends BaseActivity {
     private TextView city_select_test;
 
 
-
     @BindView(id = R.id.city_parse_area, click = true)
     private TextView city_parse_area;
 
@@ -122,7 +126,8 @@ public class TestActivity extends BaseActivity {
     private TextView email_check_text;
 
 
-
+    @BindView(id = R.id.nest_scrollview_viewpager, click = true)
+    private TextView nest_scrollview_viewpager;
 
 
     @Override
@@ -131,6 +136,13 @@ public class TestActivity extends BaseActivity {
         setContentView(R.layout.activity_test);
     }
 
+
+    @Override
+    protected void initView() {
+        super.initView();
+
+        text_title.setTitleStr("我的测试标题");
+    }
 
     @Override
     public void widgetClick(View v) {
@@ -357,11 +369,11 @@ public class TestActivity extends BaseActivity {
 
 
                         String strCity = cityPicker.getSelectedText();
-                        String cityID = cityPicker.getSelectedCityID(provinceID,strCity);
+                        String cityID = cityPicker.getSelectedCityID(provinceID, strCity);
 
 
                         String strCounty = counyPicker.getSelectedText();
-                        String countyID = counyPicker.getSelectedCountyID(cityID,strCounty);
+                        String countyID = counyPicker.getSelectedCountyID(cityID, strCounty);
 
                         LogCp.i(LogCp.CP, TestActivity.class + "选择的省ID：" + provinceID + ",,选择的市ID：" + cityID + ",,选择的区ID：" + countyID);
 
@@ -376,21 +388,22 @@ public class TestActivity extends BaseActivity {
                 areaParserUitl.openGson(TestActivity.this);
 
 
-
-
                 break;
-
-
-
-
-
 
 
             case R.id.email_check_text:
 
 
-                 String strEmail = "321@qq.com";
-          LogCp.i(LogCp.CP,TestActivity.class + "是不是一个emaial :"+StringUtils.isEmail(strEmail) );
+                String strEmail = "321@qq.com";
+                LogCp.i(LogCp.CP, TestActivity.class + "是不是一个emaial :" + StringUtils.isEmail(strEmail));
+
+
+                break;
+
+            case R.id.nest_scrollview_viewpager:
+
+
+                TestUIhelper.showResumeActivity(TestActivity.this);
 
 
                 break;

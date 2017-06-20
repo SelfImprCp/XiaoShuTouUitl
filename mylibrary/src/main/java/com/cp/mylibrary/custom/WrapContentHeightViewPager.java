@@ -7,22 +7,19 @@ import android.view.View;
 
 /**
  * Created by Jerry on 2017/4/18.
- *
+ * <p>
  * NestedScrollView嵌套ViewPager
- *
- *  用来做悬浮滚动的效果
- *
+ * <p>
+ * 用来做悬浮滚动的效果
+ * <p>
  * http://www.jianshu.com/p/28e4346a41cf
- *
+ * <p>
  * http://www.jianshu.com/p/abdb9828a00d
- *
- *      guding_detial_recycleview1.setNestedScrollingEnabled(false);
-
- *
+ * <p>
+ * guding_detial_recycleview1.setNestedScrollingEnabled(false);
  */
 
-    public class WrapContentHeightViewPager extends ViewPager {
-
+public class WrapContentHeightViewPager extends ViewPager {
 
 
     public WrapContentHeightViewPager(Context context) {
