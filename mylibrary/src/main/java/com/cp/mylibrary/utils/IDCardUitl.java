@@ -547,7 +547,9 @@ public class IDCardUitl {
             return "";
         }
         if (value.length() == 15 || value.length() == 18) {
-            String lastValue = value.substring(value.length() - 1, value.length());
+            String lastValue = value.substring(value.length() - 2, value.length()-1);
+            LogCp.i(LogCp.CP, IDCardUitl.class + "测试性别 ：  lastValue ：" +lastValue   );
+
             int sex;
             if (lastValue.trim().toLowerCase().equals("x") || lastValue.trim().toLowerCase().equals("e")) {
                 return "男";

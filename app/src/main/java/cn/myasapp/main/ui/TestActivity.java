@@ -14,6 +14,7 @@ import com.cp.mylibrary.city.ScrollerNumberPicker;
 import com.cp.mylibrary.custom.TitleBarView;
 import com.cp.mylibrary.utils.AreaParserUitl;
 import com.cp.mylibrary.utils.DateTimePickDialogUtil;
+import com.cp.mylibrary.utils.IDCardUitl;
 import com.cp.mylibrary.utils.LogCp;
 import com.cp.mylibrary.utils.StringUtils;
 
@@ -142,6 +143,12 @@ public class TestActivity extends BaseActivity {
         super.initView();
 
         text_title.setTitleStr("我的测试标题");
+
+
+        IDCardUitl idCardUitl = new IDCardUitl();
+        LogCp.i(LogCp.CP, TestActivity.class + "测试性别 ： " + idCardUitl.getSexForID("140202199410223078"));
+
+
     }
 
     @Override
