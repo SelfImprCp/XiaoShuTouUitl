@@ -27,6 +27,9 @@ public class TestUrlActivity extends BaseActivity {
     private TextView url_test_textview;
 
 
+
+
+
     @BindView(id = R.id.url_test_backcolor)
     private TextView url_test_backcolor;
 
