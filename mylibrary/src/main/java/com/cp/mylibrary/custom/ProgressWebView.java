@@ -54,13 +54,16 @@ public class ProgressWebView extends WebView {
     public class WebChromeClient extends android.webkit.WebChromeClient {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
-            if (newProgress == 100) {
-                progressbar.setVisibility(GONE);
-            } else {
-                if (progressbar.getVisibility() == GONE)
-                    progressbar.setVisibility(VISIBLE);
-                progressbar.setProgress(newProgress);
-            }
+//            if (newProgress == 100) {
+//                progressbar.setVisibility(GONE);
+//            } else {
+//                if (progressbar.getVisibility() == GONE)
+//                    progressbar.setVisibility(VISIBLE);
+//                progressbar.setProgress(newProgress);
+//            }
+
+
+
             super.onProgressChanged(view, newProgress);
         }
 
