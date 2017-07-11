@@ -12,6 +12,7 @@ import cn.myasapp.main.ui.DialogTestActivity;
 import cn.myasapp.main.ui.GestureLockActivity;
 import cn.myasapp.main.ui.GestureVerifyActivity;
 import cn.myasapp.main.ui.ResumeActivity;
+import cn.myasapp.main.ui.ScrollViewTextActivity;
 import cn.myasapp.main.ui.TestListViewRefreshActivity;
 import cn.myasapp.main.ui.SimpleBackActivity;
 import cn.myasapp.main.ui.TestActivity;
@@ -152,6 +153,11 @@ public class TestUIhelper {
 
 
 
+    public static void showScrollViewText(Context context) {
+        OpenActivityUtil.getInstance().openActivity(context,    ScrollViewTextActivity
+                .class);
+    }
+
 
 
 
@@ -164,6 +170,10 @@ public class TestUIhelper {
 
 
     }
+
+
+
+
 
 
 

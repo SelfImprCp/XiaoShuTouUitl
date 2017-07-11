@@ -141,6 +141,7 @@ public class MyBaseActivity extends KJActivity {
         if (!NetWorkUtil.hasInternetConnected(this)) {
 
             ShowToastUtil.showToast(this,"请检查网络");
+
         }
 
     }

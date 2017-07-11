@@ -205,6 +205,13 @@
                 style="@style/test_textview_style"
                 android:text=" NestedScrollView嵌套ViewPager  " />
 
+
+            <TextView
+                android:id="@+id/nest_scrollview_text"
+
+                style="@style/test_textview_style"
+                android:text="   测试文字滚动 " />
+
         </LinearLayout>
     </com.cp.mylibrary.custom.CPScrollView>
 

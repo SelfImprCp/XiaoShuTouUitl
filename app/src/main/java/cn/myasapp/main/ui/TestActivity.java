@@ -131,6 +131,15 @@ public class TestActivity extends BaseActivity {
     private TextView nest_scrollview_viewpager;
 
 
+
+
+
+    @BindView(id = R.id.nest_scrollview_text, click = true)
+    private TextView nest_scrollview_text;
+
+
+
+
     @Override
     public void setRootView() {
 
@@ -414,6 +423,16 @@ public class TestActivity extends BaseActivity {
 
 
                 break;
+
+            case R.id.nest_scrollview_text:
+
+
+                TestUIhelper.showScrollViewText(TestActivity.this);
+
+
+                break;
+
+
 
 
         }

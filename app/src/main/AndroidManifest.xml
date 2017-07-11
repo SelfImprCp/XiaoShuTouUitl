@@ -87,6 +87,17 @@
             android:screenOrientation="portrait" />
 
 
+
+        <activity
+            android:name=".ui.ScrollViewTextActivity"
+            android:label="RandomUtil "
+            android:screenOrientation="portrait" />
+
+
+
+
+
+
             <activity
             android:name=".ui.TestScreentUtils"
             android:label="ScreenUtil "
