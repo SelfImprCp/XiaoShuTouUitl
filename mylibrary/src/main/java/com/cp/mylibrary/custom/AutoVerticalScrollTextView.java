@@ -15,6 +15,8 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import com.cp.mylibrary.R;
+
 /**
  * 自动垂直滚动的TextView
  */
@@ -50,7 +52,7 @@ public class AutoVerticalScrollTextView extends TextSwitcher implements ViewSwit
 
     }
 
-    private Rotate3dAnimation createAnim( boolean turnIn, boolean turnUp){
+    private Rotate3dAnimation createAnim(boolean turnIn, boolean turnUp) {
 
         Rotate3dAnimation rotation = new Rotate3dAnimation(turnIn, turnUp);
         rotation.setDuration(1200);//执行动画的时间
@@ -66,23 +68,24 @@ public class AutoVerticalScrollTextView extends TextSwitcher implements ViewSwit
 
         TextView textView = new TextView(mContext);
         textView.setGravity(Gravity.LEFT);
-        textView.setTextSize(20);
+        textView.setTextSize(12);
         textView.setSingleLine(true);
         textView.setGravity(Gravity.CENTER_VERTICAL);
         textView.setEllipsize(TextUtils.TruncateAt.END);
-        textView.setTextColor(Color.WHITE);
+
+        textView.setTextColor(getResources().getColor(R.color.color_666666));
         return textView;
 
     }
 
     //定义动作，向上滚动翻页
-    public void next(){
+    public void next() {
         //显示动画
-        if(getInAnimation() != mInUp){
+        if (getInAnimation() != mInUp) {
             setInAnimation(mInUp);
         }
         //隐藏动画
-        if(getOutAnimation() != mOutUp){
+        if (getOutAnimation() != mOutUp) {
             setOutAnimation(mOutUp);
         }
     }
@@ -103,25 +106,25 @@ public class AutoVerticalScrollTextView extends TextSwitcher implements ViewSwit
         public void initialize(int width, int height, int parentWidth, int parentHeight) {
             super.initialize(width, height, parentWidth, parentHeight);
             mCamera = new Camera();
-            mCenterY = getHeight() ;
-            mCenterX = getWidth() ;
+            mCenterY = getHeight();
+            mCenterX = getWidth();
         }
 
         @Override
         protected void applyTransformation(float interpolatedTime, Transformation t) {
 
-            final float centerX = mCenterX ;
-            final float centerY = mCenterY ;
+            final float centerX = mCenterX;
+            final float centerY = mCenterY;
             final Camera camera = mCamera;
-            final int derection = mTurnUp ? 1: -1;
+            final int derection = mTurnUp ? 1 : -1;
 
             final Matrix matrix = t.getMatrix();
 
             camera.save();
             if (mTurnIn) {
-                camera.translate(0.0f, derection *mCenterY * (interpolatedTime - 1.0f), 0.0f);
+                camera.translate(0.0f, derection * mCenterY * (interpolatedTime - 1.0f), 0.0f);
             } else {
-                camera.translate(0.0f, derection *mCenterY * (interpolatedTime), 0.0f);
+                camera.translate(0.0f, derection * mCenterY * (interpolatedTime), 0.0f);
             }
             camera.getMatrix(matrix);
             camera.restore();
