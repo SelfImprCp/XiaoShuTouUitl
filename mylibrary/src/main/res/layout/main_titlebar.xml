@@ -97,7 +97,7 @@
         android:layout_alignParentRight="true"
         android:textColor="#269edc"
         android:textSize="16sp"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/titlebar_img_menu"
