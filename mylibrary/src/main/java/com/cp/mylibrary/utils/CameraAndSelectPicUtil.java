@@ -64,8 +64,8 @@ public class CameraAndSelectPicUtil {
     private String protraitPath;
     private String theLarge;
 
-    private int CROP_W = 300;
-    private int CROP_H = 600;
+    private int CROP_W = 200;
+    private int CROP_H = 200;
 
     /**
      * @param context
