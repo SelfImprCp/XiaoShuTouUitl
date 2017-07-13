@@ -33,6 +33,7 @@ public class TestBanner extends MyBaseFragmentActivity {
 
     @Override
     protected int setRootView() {
+
         return  R.layout.activity_banner;
 
     }
