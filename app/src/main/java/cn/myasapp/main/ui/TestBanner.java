@@ -90,6 +90,8 @@ public class TestBanner extends MyBaseFragmentActivity {
         bannerInitUtil.initBannerViewPager(this, true, 2000, infos, cycleViewPager, mAdCycleViewListener);
 
 
+
+
     }
 
 
